@@ -1,0 +1,23 @@
+{
+  "layout": {
+    "spacing": {
+      "small": {
+        "value": "4px"
+      },
+      "medium": {
+        "value": "8px"
+      },
+      "large": {
+        "value": "16px"
+      },
+      "xlarge": {
+        "value": "32px"
+      }
+    },
+    "border-radius": {
+      "default": {
+        "value": "4px"
+      }
+    }
+  }
+}
