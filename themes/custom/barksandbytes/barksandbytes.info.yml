@@ -1,0 +1,22 @@
+name: barksandbytes
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - barksandbytes/base
+  - barksandbytes/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - barksandbytes/user
+  core/drupal.dropbutton:
+    - barksandbytes/dropbutton
+  core/drupal.dialog:
+    - barksandbytes/dialog
+  file/drupal.file:
+    - barksandbytes/file
+  core/drupal.progress:
+    - barksandbytes/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.8'
