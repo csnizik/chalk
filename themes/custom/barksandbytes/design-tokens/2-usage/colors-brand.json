@@ -1,0 +1,53 @@
+{
+  "theme": {
+    "color": {
+      "primary": {
+        "foreground": {
+          "@": {
+            "value": "{color.brand.blue.500}"
+          },
+          "hover": {
+            "value": "{color.brand.blue.800}"
+          },
+          "inverted": {
+            "@": {
+              "value": "{color.brand.blue.300}"
+            },
+            "hover": {
+              "value": "{color.brand.blue.500}"
+            }
+          }
+        },
+        "background": {
+          "@": {
+            "value": "{color.brand.blue.500}"
+          },
+          "inverted": {
+            "@": {
+              "value": "{color.brand.blue.300}"
+            },
+            "hover": {
+              "value": "{color.brand.blue.500}"
+            }
+          }
+        },
+        "border": {
+          "@": {
+            "value": "{color.brand.blue.500}"
+          },
+          "hover": {
+            "value": "{color.brand.blue.800}"
+          },
+          "inverted": {
+            "@": {
+              "value": "{color.brand.blue.300}"
+            },
+            "hover": {
+              "value": "{color.brand.blue.500}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

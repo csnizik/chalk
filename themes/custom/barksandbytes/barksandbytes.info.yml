@@ -5,6 +5,7 @@ starterkit: true
 version: VERSION
 libraries:
   - barksandbytes/base
+  - barksandbytes/global-styling
   - barksandbytes/messages
   - core/normalize
 libraries-extend:

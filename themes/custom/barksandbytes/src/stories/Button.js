@@ -1,21 +1,28 @@
-import './button.css';
-
-export const createButton = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+export function createButton({
   label,
-  onClick,
-}) => {
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.innerText = label;
-  btn.addEventListener('click', onClick);
+  primary,
+  size,
+  backgroundColor,
+  ...args
+}) {
+  const button = document.createElement('button')
+  button.type = 'button'
+  button.innerText = label
+  button.className = `button${
+    primary ? ' button--primary' : ''
+  } button--${size}`
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  btn.className = ['storybook-button', `storybook-button--${size}`, mode].join(' ');
+  // Apply design tokens
+  if (backgroundColor) {
+    button.style.setProperty('--button-background-color', backgroundColor)
+  }
 
-  btn.style.backgroundColor = backgroundColor;
+  // Pass through any other args, such as onClick event handlers
+  Object.entries(args).forEach(([key, value]) => {
+    if (key in button) {
+      button[key] = value
+    }
+  })
 
-  return btn;
-};
+  return button
+}

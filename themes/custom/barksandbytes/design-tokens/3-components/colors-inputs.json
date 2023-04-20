@@ -1,0 +1,68 @@
+{
+  "theme": {
+    "color": {
+      "checkbox": {
+        "border": {
+          "default": {
+            "value": "{theme.color.neutral.border.default}"
+          },
+          "hover": { "value": "{theme.color.neutral.border.hover}" },
+          "focus": { "value": "{theme.color.neutral.border.focus}" },
+          "disabled": {
+            "value": "{theme.color.neutral.border.disabled}"
+          },
+          "onDisabled": {
+            "value": "{theme.color.neutral.border.onDisabled}"
+          },
+          "error": {
+            "value": "{theme.color.form.input.border.error}"
+          }
+        },
+        "checked": {
+          "default": { "value": "{color.brand.blue.500}" },
+          "hover": { "value": "{theme.color.hover.1}" },
+          "focus": { "value": "{theme.color.focus.1}" },
+          "disabled": { "value": "{theme.color.disabled.1}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        }
+      },
+      "radio": {
+        "border": {
+          "default": {
+            "value": "{theme.color.neutral.border.default}"
+          },
+          "hover": { "value": "{theme.color.neutral.border.hover}" },
+          "focus": { "value": "{theme.color.neutral.border.focus}" },
+          "disabled": {
+            "value": "{theme.color.neutral.border.disabled}"
+          },
+          "onDisabled": {
+            "value": "{theme.color.neutral.border.onDisabled}"
+          }
+        },
+        "checked": {
+          "default": { "value": "{color.brand.blue.500}" },
+          "hover": { "value": "{theme.color.hover.1}" },
+          "focus": { "value": "{theme.color.focus.1}" },
+          "disabled": { "value": "{theme.color.disabled.1}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        }
+      },
+      "input": {
+        "border": {
+          "default": {
+            "value": "{theme.color.neutral.border.default}"
+          },
+          "hover": { "value": "{theme.color.neutral.border.hover}" },
+          "focus": { "value": "{theme.color.neutral.border.focus}" },
+          "disabled": {
+            "value": "{theme.color.neutral.border.disabled}"
+          },
+          "onDisabled": {
+            "value": "{theme.color.neutral.border.onDisabled}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "theme": {
+    "color": {
+      "text-highlight": {
+        "foreground": {
+          "value": "{color.neutral.white}"
+        },
+        "background": {
+          "value": "{color.brand.blue.300}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "theme": {
+    "color": {
+      "primary": {
+        "default": { "value": "{color.brand.blue.500}" },
+        "hover": { "value": "{theme.color.hover.1}" },
+        "focus": { "value": "{theme.color.focus.1}" },
+        "disabled": { "value": "{theme.color.disabled.1}" },
+        "onDisabled": { "value": "{theme.color.disabled.3}" },
+        "active": {
+          "default": { "value": "{color.brand.blue.50}" },
+          "hover": { "value": "{theme.color.hover.2}" },
+          "focus": { "value": "{theme.color.focus.2}" },
+          "disabled": { "value": "{theme.color.disabled.1}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        },
+        "background": {
+          "default": { "value": "{color.neutral.white}" },
+          "hover": { "value": "{theme.color.hover.4}" },
+          "focus": { "value": "{theme.color.focus.4}" },
+          "disabled": { "value": "{theme.color.disabled.1}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        }
+      },
+      "neutral": {
+        "container": {
+          "default": { "value": "{color.neutral.50}" },
+          "hover": { "value": "{theme.color.hover.3}" },
+          "focus": { "value": "{theme.color.focus.3}" },
+          "disabled": { "value": "{theme.color.disabled.1}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        },
+        "background": {
+          "default": { "value": "{color.neutral.white}" },
+          "hover": { "value": "{theme.color.hover.5}" },
+          "focus": { "value": "{theme.color.focus.5}" },
+          "disabled": { "value": "{theme.color.disabled.2}" },
+          "onDisabled": { "value": "{theme.color.disabled.3}" }
+        },
+        "border": {
+          "default": { "value": "{color.neutral.400}" },
+          "hover": { "value": "{color.neutral.600}" },
+          "focus": { "value": "{color.brand.blue.500}" },
+          "disabled": { "value": "{color.neutral.200}" },
+          "onDisabled": { "value": "{color.neutral.400}" }
+        }
+      }
+    }
+  }
+}

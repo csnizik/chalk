@@ -1,0 +1,35 @@
+{
+  "theme": {
+    "color": {
+      "disabled": {
+        "foreground": {
+          "@": {
+            "value": "{theme.color.neutral.md.foreground.@}"
+          },
+          "inverted": {
+            "value": "{theme.color.neutral.md.foreground.inverted}"
+          }
+        },
+        "background": {
+          "@": {
+            "value": "{color.neutral.200}"
+          },
+          "inverted": {
+            "value": "{theme.color.neutral.subtle.background.inverted}"
+          }
+        },
+        "border": {
+          "@": {
+            "value": "{color.neutral.200}"
+          },
+          "inverted": {
+            "value": "{theme.color.neutral.md.border.inverted}"
+          }
+        },
+        "1": { "value": "{color.neutral.50}" },
+        "2": { "value": "{color.neutral.white}" },
+        "3": { "value": "{color.neutral.400}" }
+      }
+    }
+  }
+}

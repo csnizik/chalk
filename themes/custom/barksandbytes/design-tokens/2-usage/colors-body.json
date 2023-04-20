@@ -1,0 +1,24 @@
+{
+  "theme": {
+    "color": {
+      "body": {
+        "foreground": {
+          "@": {
+            "value": "{color.neutral.900}"
+          },
+          "inverted": {
+            "value": "{color.neutral.white}"
+          }
+        },
+        "background": {
+          "@": {
+            "value": "{color.neutral.white}"
+          },
+          "inverted": {
+            "value": "{color.neutral.900}"
+          }
+        }
+      }
+    }
+  }
+}
