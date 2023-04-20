@@ -5,11 +5,25 @@
   "main": "index.js",
   "scripts": {
     "build-tokens": "style-dictionary build -c style-dictionary.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Christopher Snizik",
   "license": "ISC",
   "dependencies": {
     "style-dictionary": "^3.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@storybook/addon-actions": "^7.0.6",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/html": "^7.0.6",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/testing-library": "^0.1.0",
+    "babel-loader": "^8.3.0"
   }
 }
