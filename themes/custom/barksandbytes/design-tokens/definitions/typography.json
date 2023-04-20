@@ -1,6 +1,6 @@
 {
   "font-family": {
-    "primary": { "value": "euclid" }
+    "primary": { "value": "roboto" }
   },
   "font-weight": {
     "regular": { "value": "400" },

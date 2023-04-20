@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 20 Apr 2023 20:51:51 GMT
+ * Generated on Thu, 20 Apr 2023 21:06:26 GMT
  */
 
 export const ColorPrimary = "#007bff";
@@ -16,7 +16,7 @@ export const LayoutSpacingMedium = "8px";
 export const LayoutSpacingLarge = "16px";
 export const LayoutSpacingXlarge = "32px";
 export const LayoutBorderRadiusDefault = "4px";
-export const FontFamilyPrimary = "euclid";
+export const FontFamilyPrimary = "roboto";
 export const FontWeightRegular = "400";
 export const FontWeightMedium = "500";
 export const FontWeightBold = "700";
