@@ -3,8 +3,10 @@
  * Styles for link buttons and action links.
  */
 
+@import 'design-tokens';
+
 .action-links {
-  margin: 1em 0;
+  margin: $layout-spacing-medium 0;
   padding: 0;
   list-style: none;
 }
