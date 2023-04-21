@@ -48,6 +48,7 @@ base:
         weight: -10
     theme:
       src/css/tokens/design-tokens.css: {}
+      css/main.css: {}
   js:
     src/js/tokens/design-tokens.js: {}
 dialog:
