@@ -1,0 +1,22 @@
+name: 'Barks Theme'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - barks/base
+  - barks/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - barks/user
+  core/drupal.dropbutton:
+    - barks/dropbutton
+  core/drupal.dialog:
+    - barks/dialog
+  file/drupal.file:
+    - barks/file
+  core/drupal.progress:
+    - barks/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.8'
