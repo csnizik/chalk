@@ -1,7 +1,7 @@
 {
   "name": "barks",
   "version": "1.0.0",
-  "description": "barks theme, generated from starterkit_theme. Additional information on generating themes can be found in the [Starterkit documentation](https://www.drupal.org/docs/core-modules-and-themes/core-themes/starterkit-theme).",
+  "description": "Barks theme, generated from starterkit_theme. Includes tokenization with style-dictionary.js.",
   "main": "index.js",
   "scripts": {
     "build-tokens": "style-dictionary build -c ./style-dictionary.config.js",
