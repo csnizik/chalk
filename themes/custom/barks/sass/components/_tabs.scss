@@ -15,13 +15,13 @@ ul.tabs {
   display: inline-block;
   margin-right: 0.3em; /* LTR */
 }
-[dir="rtl"] .tabs > li {
+[dir='rtl'] .tabs > li {
   margin-right: 0;
   margin-left: 0.3em;
 }
 .tabs a {
   display: block;
-  padding: 0.2em 1em;
+  padding: $layout-spacing-negative-small 1em;
   text-decoration: none;
 }
 .tabs a.is-active {

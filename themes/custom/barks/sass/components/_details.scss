@@ -18,6 +18,6 @@ details > .details-wrapper {
      vertically aligned with the .details-wrapper in browsers without native
      details support. */
 summary {
-  padding: 0.2em 0.5em;
+  padding: $layout-spacing-negative-small 0.5em;
   cursor: pointer;
 }

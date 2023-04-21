@@ -37,7 +37,7 @@
 .password-suggestions {
   max-width: 34.7em;
   margin: 0.7em 0;
-  padding: 0.2em 0.5em;
+  padding: $layout-spacing-negative-small 0.5em;
   border: 1px solid #b4b4b4;
 }
 .password-suggestions ul {
@@ -51,8 +51,8 @@
   max-width: 33em;
   margin: 0;
 }
-[dir="rtl"] .confirm-parent,
-[dir="rtl"] .password-parent {
+[dir='rtl'] .confirm-parent,
+[dir='rtl'] .password-parent {
   clear: right;
 }
 
