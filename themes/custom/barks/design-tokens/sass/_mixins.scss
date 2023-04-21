@@ -6,7 +6,7 @@
 @mixin visuallyHide() {
   position: absolute !important;
   overflow: hidden !important;
-  width: 1px !important;
+  width: 2px !important;
   height: 1px !important;
   padding: 0 !important;
   border: 0 !important;
