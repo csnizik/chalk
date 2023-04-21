@@ -1,0 +1,34 @@
+{
+  "typography": {
+    "font-family": {
+      "primary": {
+        "value": "Arial, sans-serif"
+      },
+      "secondary": {
+        "value": "'Helvetica Neue', sans-serif"
+      }
+    },
+    "font-size": {
+      "small": {
+        "value": "0.875rem"
+      },
+      "medium": {
+        "value": "1rem"
+      },
+      "large": {
+        "value": "1.25rem"
+      },
+      "xlarge": {
+        "value": "1.5rem"
+      }
+    },
+    "font-weight": {
+      "normal": {
+        "value": "400"
+      },
+      "bold": {
+        "value": "700"
+      }
+    }
+  }
+}
