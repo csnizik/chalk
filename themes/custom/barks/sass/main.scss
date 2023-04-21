@@ -1,13 +1,12 @@
 // Import design tokens
-@import 'tokens/_design-tokens';
+@import 'design-tokens';
 
 // Import base styles
-@import 'design-tokens/sass/abstracts/_mixins';
-@import 'design-tokens/sass/base/_body';
+@import 'global/abstracts/_mixins';
+@import 'global/base/_body';
 
 // Import utility styles
-@import 'design-tokens/utilities/_visibility';
-@import 'design-tokens/utilities/Utilities';
+@import 'global/utilities/_visibility';
 
 // Import component styles
 @import 'components/_action-links';

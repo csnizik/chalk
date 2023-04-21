@@ -1,6 +1,9 @@
 {
   "layout": {
     "spacing": {
+      "xsmall": {
+        "value": ".1rem"
+      },
       "small": {
         "value": ".25rem"
       },
@@ -11,6 +14,21 @@
         "value": "1rem"
       },
       "xlarge": {
+        "value": "2rem"
+      },
+      "negative-xsmall": {
+        "value": ".1rem"
+      },
+      "negative-small": {
+        "value": ".25rem"
+      },
+      "negative-medium": {
+        "value": ".5rem"
+      },
+      "negative-large": {
+        "value": "1rem"
+      },
+      "negative-xlarge": {
         "value": "2rem"
       }
     },

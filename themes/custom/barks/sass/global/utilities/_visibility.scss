@@ -1,4 +1,4 @@
-@import '../../scss/mixins';
+@import '../abstracts/mixins';
 
 .u-is-vishidden {
   @include visuallyHide;

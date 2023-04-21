@@ -6,7 +6,7 @@
 @import 'design-tokens';
 
 .action-links {
-  margin: $layout-spacing-medium 0;
+  margin: $layout-spacing-large 0;
   padding: 0;
   list-style: none;
 }
@@ -16,20 +16,20 @@
 }
 .action-links li {
   display: inline-block;
-  margin: 0 0.3em;
+  margin: 0 $layout-spacing-small;
 }
 .action-links li:first-child {
   margin-left: 0; /* LTR */
 }
 [dir='rtl'] .action-links li:first-child {
   margin-right: 0;
-  margin-left: 0.3em;
+  margin-left: $layout-spacing-small;
 }
 .button-action {
   display: inline-block;
-  padding: 0.2em 0.5em 0.3em;
+  padding: $layout-spacing-small $layout-spacing-medium $layout-spacing-small;
   text-decoration: none;
-  line-height: 160%;
+  line-height: $typography-line-height-xl;
 }
 .button-action:before {
   margin-left: -0.1em; /* LTR */
