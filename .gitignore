@@ -41,8 +41,8 @@ sites/*/files/php/
 
 
 # Ignore Composer vendor folder
-/vendor/
+vendor/
 
 
 # Ignore Node.js dependency folder
-/node_modules/
+node_modules/
