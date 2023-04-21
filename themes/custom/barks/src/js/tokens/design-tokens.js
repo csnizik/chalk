@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 21 Apr 2023 15:25:11 GMT
+ * Generated on Fri, 21 Apr 2023 15:29:25 GMT
  */
 
 export const ColorPrimary = "#007bff";

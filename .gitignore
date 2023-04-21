@@ -46,3 +46,9 @@ vendor/
 
 # Ignore Node.js dependency folder
 node_modules/
+
+
+# Ignore files compiled by theme
+themes/custom/barks/src/css/tokens/design-tokens.css
+themes/custom/barks/src/js/tokens/design-tokens.js
+themes/custom/barks/src/sass/tokens/_design-tokens.scss
