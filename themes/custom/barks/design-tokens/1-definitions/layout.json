@@ -17,19 +17,19 @@
         "value": "2rem"
       },
       "negative-xsmall": {
-        "value": ".1rem"
+        "value": "-.1rem"
       },
       "negative-small": {
-        "value": ".25rem"
+        "value": "-.25rem"
       },
       "negative-medium": {
-        "value": ".5rem"
+        "value": "-.5rem"
       },
       "negative-large": {
-        "value": "1rem"
+        "value": "-1rem"
       },
       "negative-xlarge": {
-        "value": "2rem"
+        "value": "-2rem"
       }
     },
     "border-radius": {

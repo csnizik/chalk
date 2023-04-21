@@ -10,7 +10,8 @@
         "400": { "value": "#b03f63" },
         "300": { "value": "#bd466e" },
         "200": { "value": "#c94c78" },
-        "100": { "value": "#d65282" }
+        "100": { "value": "#d65282" },
+        "50": { "value": "#f4a6ad" }
       },
       "yellow": {
         "900": { "value": "#7d6b25" },
@@ -32,7 +33,8 @@
         "400": { "value": "#4d519b" },
         "300": { "value": "#575aa9" },
         "200": { "value": "#6164b8" },
-        "100": { "value": "#6b6dc7" }
+        "100": { "value": "#6b6dc7" },
+        "50": { "value": "#7a83d6" }
       },
       "green": {
         "900": { "value": "#306820" },
@@ -43,7 +45,8 @@
         "400": { "value": "#5ea552" },
         "300": { "value": "#67b05b" },
         "200": { "value": "#70bc67" },
-        "100": { "value": "#7ac973" }
+        "100": { "value": "#7ac973" },
+        "50": { "value": "#a3c293" }
       },
       "neutral": {
         "white": { "value": "#ffffff" },
@@ -66,22 +69,34 @@
         "90": {
           "value": "rgba(0, 0, 0, .9)"
         }
+      }
+    },
+    "other": {
+      "blue": {
+        "value": "#00539b"
       },
-      "other": {
-        "hover": {
-          "1": { "value": "#1F66E4" },
-          "2": { "value": "#D2E8FF" },
-          "3": { "value": "#E5E5E5" },
-          "4": { "value": "#EDF4FF" },
-          "5": { "value": "#ECECEC" }
-        },
-        "focus": {
-          "1": { "value": "#1E63DA" },
-          "2": { "value": "#CBE2FE" },
-          "3": { "value": "#DCDCDC" },
-          "4": { "value": "#E4EDFE" },
-          "5": { "value": "#E2E2E2" }
-        }
+      "green": {
+        "value": "#377331"
+      },
+      "yellow": {
+        "value": "#AF851A"
+      },
+      "red": {
+        "value": "#d50032"
+      },
+      "hover": {
+        "1": { "value": "#1F66E4" },
+        "2": { "value": "#D2E8FF" },
+        "3": { "value": "#E5E5E5" },
+        "4": { "value": "#EDF4FF" },
+        "5": { "value": "#ECECEC" }
+      },
+      "focus": {
+        "1": { "value": "#1E63DA" },
+        "2": { "value": "#CBE2FE" },
+        "3": { "value": "#DCDCDC" },
+        "4": { "value": "#E4EDFE" },
+        "5": { "value": "#E2E2E2" }
       }
     }
   }

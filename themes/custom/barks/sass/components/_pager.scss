@@ -9,7 +9,7 @@
 }
 .pager__item {
   display: inline;
-  padding: 0.5em;
+  padding: $layout-spacing-medium;
 }
 .pager__item.is-active {
   font-weight: bold;

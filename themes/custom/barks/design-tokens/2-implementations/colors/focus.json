@@ -1,0 +1,22 @@
+{
+  "theme": {
+    "color": {
+      "focus-ring": {
+        "default": {
+          "value": "{color.brand.blue.500}"
+        },
+        "inverted": {
+          "value": "{color.brand.neutral.white}"
+        }
+      },
+      "focus": {
+        "1": { "value": "{color.other.focus.1}" },
+        "2": { "value": "{color.other.focus.2}" },
+        "3": { "value": "{color.other.focus.3}" },
+        "4": { "value": "{color.other.focus.4}" },
+        "5": { "value": "{color.other.focus.5}" },
+        "6": { "value": "{color.brand.blue.500}" }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "theme": {
+    "border": {
+      "radius": {
+        "value": "{border.radius.md}"
+      },
+      "width": {
+        "value": "{border.width.sm}"
+      }
+    }
+  }
+}

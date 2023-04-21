@@ -5,7 +5,7 @@
 
 /* Visual styling for the Password strength indicator */
 .password-strength__meter {
-  margin-top: 0.5em;
+  margin-top: $layout-spacing-medium;
   background-color: #ebeae4;
 }
 .password-strength__indicator {
@@ -37,8 +37,8 @@
 .password-suggestions {
   max-width: 34.7em;
   margin: 0.7em 0;
-  padding: $layout-spacing-negative-small 0.5em;
-  border: 1px solid #b4b4b4;
+  padding: $layout-spacing-negative-small $layout-spacing-medium;
+  border: $border-width-sm solid #b4b4b4;
 }
 .password-suggestions ul {
   margin-bottom: 0;

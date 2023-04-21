@@ -53,17 +53,17 @@ body {
 }
 
 .button-action:before {
-  margin-left: 0.1rem; /* LTR */
-  padding-right: 0.25rem; /* LTR */
+  margin-left: -0.1rem; /* LTR */
+  padding-right: -0.25rem; /* LTR */
   content: "+";
   font-weight: 700;
 }
 
 [dir=rtl] .button-action:before {
-  margin-right: 0.1rem;
+  margin-right: -0.1rem;
   margin-left: 0;
   padding-right: 0;
-  padding-left: 0.25rem;
+  padding-left: -0.25rem;
 }
 
 /**
@@ -71,7 +71,7 @@ body {
  * Styles for breadcrumbs.
  */
 .breadcrumb {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 }
 
 .breadcrumb ol {
@@ -116,7 +116,7 @@ body {
 
 .form-type-radios .container-inline .form-type-radio,
 .form-type-checkboxes .container-inline .form-type-checkbox {
-  margin: 0 1em;
+  margin: 0 1rem;
 }
 
 .container-inline .form-actions,
@@ -133,20 +133,20 @@ body {
  * @see http://nicolasgallagher.com/css-background-image-hacks/
  */
 details {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
 }
 
 details > .details-wrapper {
-  padding: 0.5em 1.5em;
+  padding: 0.5rem 1.5em;
 }
 
 /* @todo Regression: The summary of uncollapsible details are no longer
      vertically aligned with the .details-wrapper in browsers without native
      details support. */
 summary {
-  padding: 0.25rem 0.5em;
+  padding: -0.25rem 0.5rem;
   cursor: pointer;
 }
 
@@ -164,7 +164,8 @@ summary {
   background: #fff;
 }
 
-@media all and (max-width: 48em) { /* 768px */
+@media all and (max-width: 48em) {
+  /* 768px */
   .ui-dialog {
     width: 92% !important;
   }
@@ -185,7 +186,7 @@ summary {
 
 .ui-dialog .ui-dialog-buttonpane {
   margin-top: 0;
-  padding: 0.3em 1em;
+  padding: 0.3em 1rem;
   border-width: 1px 0 0 0;
   border-color: #ccc;
   background: #f3f4ee;
@@ -242,7 +243,7 @@ summary {
 }
 
 .dropbutton .dropbutton-action > * {
-  padding: 0.1em 0.5em;
+  padding: 0 1rem 0.5rem;
   white-space: nowrap;
 }
 
@@ -274,17 +275,17 @@ summary {
  */
 .exposed-filters .filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: 1rem; /* LTR */
 }
 
 [dir=rtl] .exposed-filters .filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .exposed-filters .form-item {
-  margin: 0 0 0.1em 0;
+  margin: 0 0 0 1rem 0;
   padding: 0;
 }
 
@@ -304,7 +305,7 @@ summary {
 
 /* Current filters */
 .exposed-filters .current-filters {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .exposed-filters .current-filters .placeholder {
@@ -314,13 +315,13 @@ summary {
 
 .exposed-filters .additional-filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: 1rem; /* LTR */
 }
 
 [dir=rtl] .exposed-filters .additional-filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 /**
@@ -339,13 +340,13 @@ summary {
 .field--label-inline .field__label,
 .field--label-inline > .field__item,
 .field--label-inline .field__items {
-  padding-right: 0.5em;
+  padding-right: 0.5rem;
 }
 
 [dir=rtl] .field--label-inline .field__label,
 [dir=rtl] .field--label-inline .field__items {
   padding-right: 0;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 .field--label-inline .field__label::after {
@@ -446,16 +447,16 @@ form .field-multiple-table .field-multiple-drag {
 }
 
 form .field-multiple-table .field-multiple-drag .tabledrag-handle {
-  padding-right: 0.5em; /* LTR */
+  padding-right: 0.5rem; /* LTR */
 }
 
 [dir=rtl] form .field-multiple-table .field-multiple-drag .tabledrag-handle {
   padding-right: 0;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 form .field-add-more-submit {
-  margin: 0.5em 0 0;
+  margin: 0.5rem 0 0;
 }
 
 /**
@@ -619,13 +620,13 @@ abbr.ajax-changed {
  */
 .form--inline .form-item {
   float: left; /* LTR */
-  margin-right: 0.5em; /* LTR */
+  margin-right: 0.5rem; /* LTR */
 }
 
 [dir=rtl] .form--inline .form-item {
   float: right;
   margin-right: 0;
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 /* This is required to win over specificity of [dir="rtl"] .form--inline .form-item */
@@ -635,13 +636,13 @@ abbr.ajax-changed {
 
 .form--inline .form-item-separator {
   margin-top: 2.3em;
-  margin-right: 1em; /* LTR */
-  margin-left: 0.5em; /* LTR */
+  margin-right: 1rem; /* LTR */
+  margin-left: 0.5rem; /* LTR */
 }
 
 [dir=rtl] .form--inline .form-item-separator {
-  margin-right: 0.5em;
-  margin-left: 1em;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
 }
 
 .form--inline .form-actions {
@@ -698,7 +699,7 @@ button.link {
   cursor: pointer;
   border: 0;
   background: transparent;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 label button.link {
@@ -723,7 +724,7 @@ ul.links.inline {
 
 ul.inline li {
   display: inline;
-  padding: 0 0.5em;
+  padding: 0 0.5rem;
   list-style-type: none;
 }
 
@@ -736,14 +737,14 @@ ul.links a.is-active {
  * Visual styles for menu.
  */
 ul.menu {
-  margin-left: 1em; /* LTR */
+  margin-left: 1rem; /* LTR */
   padding: 0;
   list-style: none outside;
   text-align: left; /* LTR */
 }
 
 [dir=rtl] ul.menu {
-  margin-right: 1em;
+  margin-right: 1rem;
   margin-left: 0;
   text-align: right;
 }
@@ -764,7 +765,7 @@ ul.menu {
 
 .menu-item {
   margin: 0;
-  padding-top: 0.25rem;
+  padding-top: -0.25rem;
 }
 
 ul.menu a.is-active {
@@ -883,7 +884,7 @@ ul.menu a.is-active {
 
 .pager__item {
   display: inline;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 .pager__item.is-active {
@@ -968,7 +969,7 @@ tr.drag-previous {
 }
 
 body div.tabledrag-changed-warning {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 /**
@@ -1009,11 +1010,11 @@ td.is-active {
  * Visual styles for tabs.
  */
 div.tabs {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 ul.tabs {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.5rem;
   padding: 0;
   list-style: none;
 }
@@ -1030,7 +1031,7 @@ ul.tabs {
 
 .tabs a {
   display: block;
-  padding: 0.25rem 1em;
+  padding: -0.25rem 1rem;
   text-decoration: none;
 }
 
@@ -1074,7 +1075,7 @@ ul.tabs {
  */
 /* Visual styling for the Password strength indicator */
 .password-strength__meter {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
   background-color: #ebeae4;
 }
 
@@ -1111,7 +1112,7 @@ ul.tabs {
 .password-suggestions {
   max-width: 34.7em;
   margin: 0.7em 0;
-  padding: 0.25rem 0.5em;
+  padding: -0.25rem 0.5rem;
   border: 1px solid #b4b4b4;
 }
 

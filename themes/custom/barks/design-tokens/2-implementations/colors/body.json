@@ -1,0 +1,24 @@
+{
+  "theme": {
+    "color": {
+      "body": {
+        "foreground": {
+          "default": {
+            "value": "{color.brand.neutral.900}"
+          },
+          "inverted": {
+            "value": "{color.brand.neutral.white}"
+          }
+        },
+        "background": {
+          "default": {
+            "value": "{color.brand.blue.500}"
+          },
+          "inverted": {
+            "value": "{color.brand.neutral.900}"
+          }
+        }
+      }
+    }
+  }
+}

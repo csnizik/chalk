@@ -4,10 +4,10 @@
  */
 
 div.tabs {
-  margin: 1em 0;
+  margin: $layout-spacing-large 0;
 }
 ul.tabs {
-  margin: 0 0 0.5em;
+  margin: 0 0 $layout-spacing-medium;
   padding: 0;
   list-style: none;
 }
@@ -21,7 +21,7 @@ ul.tabs {
 }
 .tabs a {
   display: block;
-  padding: $layout-spacing-negative-small 1em;
+  padding: $layout-spacing-negative-small $layout-spacing-large;
   text-decoration: none;
 }
 .tabs a.is-active {

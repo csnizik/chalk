@@ -1,0 +1,24 @@
+{
+  "theme": {
+    "color": {
+      "link": {
+        "foreground": {
+          "default": {
+            "value": "{theme.color.primary.foreground.default}"
+          },
+          "hover": {
+            "value": "{theme.color.primary.foreground.inverted.default}"
+          },
+          "inverted": {
+            "default": {
+              "value": "{theme.color.primary.foreground.inverted.default}"
+            },
+            "hover": {
+              "value": "{theme.color.primary.foreground.inverted.hover}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,13 +4,13 @@
  */
 
 ul.menu {
-  margin-left: 1em; /* LTR */
+  margin-left: $layout-spacing-large; /* LTR */
   padding: 0;
   list-style: none outside;
   text-align: left; /* LTR */
 }
 [dir='rtl'] ul.menu {
-  margin-right: 1em;
+  margin-right: $layout-spacing-large;
   margin-left: 0;
   text-align: right;
 }

@@ -5,15 +5,15 @@
 
 .exposed-filters .filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: $layout-spacing-large; /* LTR */
 }
-[dir="rtl"] .exposed-filters .filters {
+[dir='rtl'] .exposed-filters .filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: $layout-spacing-large;
 }
 .exposed-filters .form-item {
-  margin: 0 0 0.1em 0;
+  margin: 0 0 0$layout-spacing-large 0;
   padding: 0;
 }
 .exposed-filters .form-item label {
@@ -21,7 +21,7 @@
   width: 10em;
   font-weight: normal;
 }
-[dir="rtl"] .exposed-filters .form-item label {
+[dir='rtl'] .exposed-filters .form-item label {
   float: right;
 }
 .exposed-filters .form-select {
@@ -29,7 +29,7 @@
 }
 /* Current filters */
 .exposed-filters .current-filters {
-  margin-bottom: 1em;
+  margin-bottom: $layout-spacing-large;
 }
 .exposed-filters .current-filters .placeholder {
   font-weight: bold;
@@ -37,10 +37,10 @@
 }
 .exposed-filters .additional-filters {
   float: left; /* LTR */
-  margin-right: 1em; /* LTR */
+  margin-right: $layout-spacing-large; /* LTR */
 }
-[dir="rtl"] .exposed-filters .additional-filters {
+[dir='rtl'] .exposed-filters .additional-filters {
   float: right;
   margin-right: 0;
-  margin-left: 1em;
+  margin-left: $layout-spacing-large;
 }
