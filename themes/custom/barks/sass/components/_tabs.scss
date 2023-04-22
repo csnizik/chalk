@@ -4,10 +4,10 @@
  */
 
 div.tabs {
-  margin: $layout-spacing-large 0;
+  margin: 1em 0;
 }
 ul.tabs {
-  margin: 0 0 $layout-spacing-medium;
+  margin: 0 0 0.5em;
   padding: 0;
   list-style: none;
 }
@@ -15,13 +15,13 @@ ul.tabs {
   display: inline-block;
   margin-right: 0.3em; /* LTR */
 }
-[dir='rtl'] .tabs > li {
+[dir="rtl"] .tabs > li {
   margin-right: 0;
   margin-left: 0.3em;
 }
 .tabs a {
   display: block;
-  padding: $layout-spacing-negative-small $layout-spacing-large;
+  padding: 0.2em 1em;
   text-decoration: none;
 }
 .tabs a.is-active {

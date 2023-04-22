@@ -13,13 +13,13 @@
 .field--label-inline .field__label,
 .field--label-inline > .field__item,
 .field--label-inline .field__items {
-  padding-right: $layout-spacing-medium;
+  padding-right: 0.5em;
 }
-[dir='rtl'] .field--label-inline .field__label,
-[dir='rtl'] .field--label-inline .field__items {
+[dir="rtl"] .field--label-inline .field__label,
+[dir="rtl"] .field--label-inline .field__items {
   padding-right: 0;
-  padding-left: $layout-spacing-medium;
+  padding-left: 0.5em;
 }
 .field--label-inline .field__label::after {
-  content: ':';
+  content: ":";
 }
