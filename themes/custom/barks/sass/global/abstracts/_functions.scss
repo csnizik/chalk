@@ -1,10 +1,1 @@
-//------------------------------------//
-//   #VARIABLES
-//------------------------------------//
 
-// 1) The size function multiplies a provided value ($value)
-//    by the base sizing unit ($size-base-unit)
-// 2) $value should be limited to integers (e.g. 3) or half integers (e.g. 1.5)
-@function size($value) {
-  @return calc(var(--sparky-size-base-unit) * $value); // size-value = 0.5rem
-}

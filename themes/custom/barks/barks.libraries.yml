@@ -47,8 +47,8 @@ base:
       css/components/ui-dialog.css:
         weight: -10
     theme:
-      src/css/tokens/design-tokens.css: {}
-      css/main.css: {}
+      src/tokens/design-tokens.css: {}
+      src/css/main.css: {}
   js:
     src/js/tokens/design-tokens.js: {}
 dialog:
