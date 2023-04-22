@@ -10,7 +10,7 @@ const colors = {
     blue: '#0241AD',
     brown: '#301C05',
     yellow: '#F4D47E',
-    white: '#D9D9D9',
+    white: '#D9D9Da',
   },
   neutral: {
     gray: '#131313',

@@ -49,6 +49,7 @@ node_modules/
 
 
 # Ignore files compiled by theme
+/src/
 **/*/design-tokens.*
 **/*/_design-tokens.*
 
