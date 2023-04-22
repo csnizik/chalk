@@ -31,7 +31,7 @@ const StyleDictionary = require('style-dictionary')
  * @description Configuration object for the Style Dictionary.
  */
 const styleDictionaryConfig = {
-  source: ['./design-tokens/**/*.json'],
+  source: ['./design-tokens/**/*.{json,js}'],
   platforms: {
     scss: {
       transformGroup: 'scss',

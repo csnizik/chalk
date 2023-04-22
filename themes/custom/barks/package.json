@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-tokens": "style-dictionary build -c ./style-dictionary.config.js",
-    "watch-tokens": "chokidar './design-tokens/**/*.json' -c 'npm run build-tokens'",
+    "watch-tokens": "chokidar './design-tokens/**/*.{json,js}' -c 'npm run build-tokens'",
     "build-css": "sass --load-path=src/sass/tokens sass/main.scss:css/main.css",
     "watch-css": "sass --load-path=src/sass/tokens --watch sass/main.scss:css/main.css",
     "build": "npm run build-tokens && npm run build-css",
