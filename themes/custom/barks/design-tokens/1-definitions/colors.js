@@ -1,18 +1,20 @@
 const processTokens = require('../../utils/processTokens')
 
+// Keys should be lowercase. If key is camelCase, an extra dash - will be added to the tokens, which may not be desirable; i.e. `stormShutters` would create tokens `$color-brand-storm-shutters-20`, etc.
 const colors = {
   brand: {
     true: {
+      // Any colors that should not be altered can be "protected" by using a subdirectory, "true". These colors will only generate a single token, i.e. colors.brand.true.tulanegreen; no additional shades will be created for these.
       tulanegreen: '#336666',
       tulaneblue: '#71C5E8',
     },
-    stormshutters: '#00778B', // if key is camelCase, an extra dash - will be added to the tokens, which may not be desirable; i.e. if this was `tulaneGreen`, the resulting tokens would be `$color-brand-tulane-green-20`, etc.
+    stormshutters: '#00778B',
     mardigras: '#78BE20',
     olivebranch: '#658D1B',
     medallion: '#cc9900',
     avenueblue: '#005558C',
     neutral: {
-      // the colors in this nested object will be tokenized as `$color-brand-neutral-limestone-80`, etc. This allows for different values for color.brand.neutral.name and color.neutral.name, for example.
+      // Nested colors will be tokenized as `$color-brand-neutral-limestone-80`, etc. This allows for different values for color.brand.neutral.name and color.neutral.name, for example.
       limestone: '#D0DEBB',
       neutralgrounds: '#796E65',
       deltablue: '#B9D9EB',
@@ -24,15 +26,15 @@ const colors = {
       azalea: '#c6007E',
       verdigris: '#71DBD4',
     },
-    white: '#D9D9Da', // use if brand colors define a custom 'white'
-    black: '#2e2e45', // use if brand colors define a custom 'black'
+    white: '#D9D9Da', // Any color with the name "black" or "white" will only generate a single token; no shades will be added.
+    black: '#2e2e45',
   },
+  // Add any colors that are not defined as 'brand' colors but that will need to be used anywhere on the site.
   core: {
-    // core can be used for any colors that are not defined by the brand but that will need to be used on the site
     true: {
-      red: '#FF0000',
-      green: '#00FF00',
-      blue: '#0000FF',
+      red: '#F00',
+      green: '#0F0',
+      blue: '#00F',
     },
     aquamarine: '#7FFFD4',
     coral: '#FF7F50',
@@ -40,7 +42,7 @@ const colors = {
     yellow: '#FFFF00',
   },
   neutral: {
-    gray: '#464646', // this value will be the darkest gray
+    gray: '#464646',
     black: '#000',
     white: '#fff',
   },
