@@ -35,7 +35,7 @@ const styleDictionaryConfig = {
   platforms: {
     scss: {
       transformGroup: 'scss',
-      buildPath: './src/sass/tokens/',
+      buildPath: './src/tokens/',
       files: [
         {
           destination: '_design-tokens.scss',
@@ -45,7 +45,7 @@ const styleDictionaryConfig = {
     },
     css: {
       transformGroup: 'css',
-      buildPath: './src/css/tokens/',
+      buildPath: './src/tokens/',
       files: [
         {
           destination: 'design-tokens.css',
@@ -55,7 +55,7 @@ const styleDictionaryConfig = {
     },
     js: {
       transformGroup: 'js',
-      buildPath: './src/js/tokens/',
+      buildPath: './src/tokens/',
       files: [
         {
           destination: 'design-tokens.js',
