@@ -115,42 +115,6 @@
               "value": "{color.brand.red.900}"
             }
           }
-        },
-        "sale": {
-          "foreground": {
-            "default": {
-              "value": "{color.brand.red.800}"
-            },
-            "inverted": {
-              "value": "{color.brand.red.800}"
-            }
-          },
-          "light": {
-            "foreground": {
-              "default": {
-                "value": "{color.brand.red.700}"
-              },
-              "inverted": {
-                "value": "{color.brand.red.700}"
-              }
-            }
-          },
-          "background": {
-            "default": {
-              "value": "{color.brand.red.50}"
-            },
-            "inverted": {
-              "value": "{color.brand.red.500}"
-            }
-          },
-          "border": {
-            "default": {
-              "value": "{color.brand.red.500}"
-            },
-            "inverted": {
-              "value": "{color.brand.red.500}"
-            }
-          }
         }
       }
     }

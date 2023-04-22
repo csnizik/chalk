@@ -46,7 +46,7 @@
               }
             },
             "error": {
-              "value": "{theme.color.utility.error}"
+              "value": "{theme.color.utility.error.foreground.default}"
             }
           }
         }
