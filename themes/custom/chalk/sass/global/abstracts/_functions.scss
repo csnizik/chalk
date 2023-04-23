@@ -1,1 +1,8 @@
+@function percentOpacity($color, $opacity) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  $alpha: $opacity * 0.01;
 
+  @return rgba($red, $green, $blue, $alpha);
+}

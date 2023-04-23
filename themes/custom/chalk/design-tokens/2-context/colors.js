@@ -2,11 +2,10 @@ const processTokens = require('../../utils/processTokens')
 
 const colors = {
   theme: {
-    primary: `$color-brand-true-tulanegreen`,
-    secondary: `$color-brand-true-tulaneblue`,
-    bodyBackground: `$color-brand-accent-verdigris-20`,
-    bodyForeground: `$colors-theme-primary`,
+    primary: `$fr-color-brand-true-tulanegreen`,
+    secondary: `$fr-color-brand-true-tulaneblue`,
+    bodyBackground: `$fr-color-brand-accent-verdigris-20`,
   },
 }
 
-module.exports = { colors: processTokens.generateTokens(colors) }
+module.exports = { coColors: processTokens.generateTokens(colors) }

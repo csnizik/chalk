@@ -25,6 +25,7 @@
  * @todo Delete as part of https://www.drupal.org/node/3015623
  */
 #}
+<div class="shad1" style="margin-left: 200px; margin-bottom: 100px; padding: 30px; background-color: white; max-width: 50%;">
 {% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
@@ -42,3 +43,61 @@
   {%- endfor -%}
 </span>
 {% endif %}
+</div>
+<div class="shad2" style="margin-left: 200px; margin-bottom: 100px; padding: 30px; background-color: white; max-width: 50%;">
+{% if not is_inline %}
+  {% include "field.html.twig" %}
+{% else %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+<span{{ attributes.addClass(classes) }}>
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
+{% endif %}
+</div>
+<div class="fly-in-md-springy-sm" style="margin-left: 200px; margin-bottom: 100px; padding: 30px; background-color: white; max-width: 50%;">
+{% if not is_inline %}
+  {% include "field.html.twig" %}
+{% else %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+<span{{ attributes.addClass(classes) }}>
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
+{% endif %}
+</div>
+<div class="fly-in-lg-springy-lg" style="margin-left: 200px; margin-bottom: 100px; padding: 30px; background-color: white; max-width: 50%;">
+{% if not is_inline %}
+  {% include "field.html.twig" %}
+{% else %}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+<span{{ attributes.addClass(classes) }}>
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+</span>
+{% endif %}
+</div>

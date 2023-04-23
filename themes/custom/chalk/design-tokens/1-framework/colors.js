@@ -12,7 +12,7 @@ const colors = {
     mardigras: '#78BE20',
     olivebranch: '#658D1B',
     medallion: '#cc9900',
-    avenueblue: '#005558C',
+    avenueblue: '#00558C',
     neutral: {
       // Nested colors will be tokenized as `$color-brand-neutral-limestone-80`, etc. This allows for different values for color.brand.neutral.name and color.neutral.name, for example.
       limestone: '#D0DEBB',
@@ -49,5 +49,5 @@ const colors = {
 }
 
 module.exports = {
-  color: processTokens.generateShades(colors),
+  frColor: processTokens.generateShades(colors),
 }

@@ -34,6 +34,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
     }
 
     const shades = {
+      10: Color(colorValue).lighten(33).toString(),
       20: Color(colorValue).lighten(30).toString(),
       40: Color(colorValue).lighten(25).toString(),
       50: Color(colorValue).lighten(22).toString(),
