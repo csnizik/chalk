@@ -1,22 +1,22 @@
-name: 'Barks Theme'
+name: 'Chalk Theme'
 type: theme
 'base theme': stable9
 starterkit: true
 version: VERSION
 libraries:
-  - barks/base
-  - barks/messages
+  - chalk/base
+  - chalk/messages
   - core/normalize
 libraries-extend:
   user/drupal.user:
-    - barks/user
+    - chalk/user
   core/drupal.dropbutton:
-    - barks/dropbutton
+    - chalk/dropbutton
   core/drupal.dialog:
-    - barks/dialog
+    - chalk/dialog
   file/drupal.file:
-    - barks/file
+    - chalk/file
   core/drupal.progress:
-    - barks/progress
+    - chalk/progress
 core_version_requirement: ^10
 generator: 'starterkit_theme:10.0.8'
