@@ -7,6 +7,9 @@ function generateTokens(tokens) {
         const tokenName = `$${category}-${key}`
         result[tokenName] = { value }
       }
+    } else {
+      const tokenName = `$${category}`
+      result[tokenName] = { value: subTokens }
     }
   }
 

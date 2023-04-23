@@ -2,18 +2,26 @@ const processTokens = require('../../utils/processTokens')
 
 const fonts = {
   family: {
-    body: ['Barlow', 'serif'],
-    heading: ['Battambang', 'sans-serif'],
-    titling: ['Karantina', 'serif'],
+    body: `'Barlow', serif`,
+    heading: `'Battambang', sans-serif`,
+    titling: `'Karantina', sans-serif`,
+  },
+  lineHeight: {
+    xs: 1,
+    sm: 1.3,
+    md: 1.7,
+    lg: 2,
+    xl: 2.5,
+    xxl: 3,
   },
   size: {
     xs: '0.7rem',
     sm: '0.8rem',
     md: '1rem',
-    lg: '1.5rem',
-    xl: '2rem',
-    xxl: '2.75rem',
-    xxxl: '3.5rem',
+    lg: '2rem',
+    xl: '3.5rem',
+    xxl: '5rem',
+    xxxl: '8rem',
   },
   style: {
     italic: 'italic',

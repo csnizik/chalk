@@ -1,6 +1,70 @@
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/barks/fonts/Barlow/Barlow-Black.ttf')
+    format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/barks/fonts/Barlow/Barlow-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/barks/fonts/Barlow/Barlow-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/barks/fonts/Barlow/Barlow-Regular.ttf')
+    format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Battambang;
+  src: url('/themes/custom/barks/fonts/Battambang/Battambang-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+}
+
+*,
+:root {
+  box-sizing: border-box; // b/c border-box
+}
+
+*:not(img):not(video):not(svg),
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: $font-line-height-md;
+  font-size: $font-size-md;
+}
+
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: #ffffff;
+  background-color: $colors-theme-body-background;
+  color: $colors-theme-body-foreground;
+  font-family: $font-family-body;
+  font-size: $font-size-md;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-heading;
+}
+
+h1 {
+  font-size: $font-size-xl;
+  color: $colors-theme-body-foreground;
 }
