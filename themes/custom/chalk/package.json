@@ -1,7 +1,7 @@
 {
   "name": "chalk",
   "version": "1.0.0",
-  "description": "Chalk theme, generated from starterkit_theme. Includes tokenization with style-dictionary.js.",
+  "description": "A theming system that uses stackable tokens to let you build a versatile Drupal design that is as easy to erase as it is to create.",
   "main": "index.js",
   "scripts": {
     "build-tokens": "style-dictionary build -c ./style-dictionary.config.js",

@@ -1,5 +1,5 @@
 name: 'Chalk Theme'
-description: 'A dynamic design system that uses customizable tokens to let you buile a versatile Drupal design that's as easy to erase as it is to create.'
+description: 'A theming system that uses stackable tokens to let you build a versatile Drupal design that is as easy to erase as it is to create.'
 type: theme
 'base theme': stable9
 starterkit: true
