@@ -1,7 +1,7 @@
 {
-  "name": "barks",
+  "name": "chalk",
   "version": "1.0.0",
-  "description": "Barks theme, generated from starterkit_theme. Includes tokenization with style-dictionary.js.",
+  "description": "Chalk theme, generated from starterkit_theme. Includes tokenization with style-dictionary.js.",
   "main": "index.js",
   "scripts": {
     "build-tokens": "style-dictionary build -c ./style-dictionary.config.js",
