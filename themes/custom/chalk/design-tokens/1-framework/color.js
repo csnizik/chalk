@@ -1,7 +1,7 @@
 const processTokens = require('../../utils/processTokens')
 
 // Keys should be lowercase. If key is camelCase, an extra dash - will be added to the tokens, which may not be desirable; i.e. `stormShutters` would create tokens `$color-brand-storm-shutters-20`, etc.
-const colors = {
+const color = {
   brand: {
     true: {
       // Any colors that should not be altered can be "protected" by using a subdirectory, "true". These colors will only generate a single token, i.e. colors.brand.true.tulanegreen; no additional shades will be created for these.
@@ -49,5 +49,5 @@ const colors = {
 }
 
 module.exports = {
-  frColor: processTokens.generateShades(colors),
+  frColor: processTokens.generateShades(color),
 }

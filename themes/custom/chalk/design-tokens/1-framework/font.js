@@ -1,6 +1,6 @@
 const processTokens = require('../../utils/processTokens')
 
-const fonts = {
+const font = {
   family: {
     body: `'Barlow', serif`,
     heading: `'Battambang', sans-serif`,
@@ -39,4 +39,4 @@ const fonts = {
   },
 }
 
-module.exports = { frFont: processTokens.generateTokens(fonts) }
+module.exports = { frFont: processTokens.generateTokens(font) }

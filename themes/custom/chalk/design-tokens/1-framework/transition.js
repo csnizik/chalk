@@ -17,7 +17,7 @@ const transition = {
     easeOut: 'ease-out',
     easeInOut: 'ease-in-out',
     springySm: 'cubic-bezier(0.25, 0.8, 0.25, 1.1)',
-    springyLg: 'cubic-bezier(0.5, -0.5, 0.5, 1.5)',
+    springyLg: 'cubic-bezier(0.33, -0.33, 0.33, 1.33)',
   },
 }
 

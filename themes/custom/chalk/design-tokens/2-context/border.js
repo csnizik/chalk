@@ -2,7 +2,7 @@ const processTokens = require('../../utils/processTokens')
 
 // Using em here instead of rem for more accurate proportional sizing
 
-const borders = {
+const border = {
   borderStyle: {
     solid: 'solid',
     groove: 'groove',
@@ -26,4 +26,4 @@ const borders = {
   },
 }
 
-module.exports = { coBorder: processTokens.generateTokens(borders) }
+module.exports = { coBorder: processTokens.generateTokens(border) }
