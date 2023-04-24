@@ -1,0 +1,23 @@
+name: 'Chalk Theme'
+description: 'A theming system that uses stackable tokens to let you build a versatile Drupal design that is as easy to erase as it is to create.'
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - chalk/base
+  - chalk/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - chalk/user
+  core/drupal.dropbutton:
+    - chalk/dropbutton
+  core/drupal.dialog:
+    - chalk/dialog
+  file/drupal.file:
+    - chalk/file
+  core/drupal.progress:
+    - chalk/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.8'

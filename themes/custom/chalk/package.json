@@ -1,0 +1,26 @@
+{
+  "name": "chalk",
+  "version": "1.0.0",
+  "description": "A theming system that uses stackable tokens to let you build a versatile Drupal design that is as easy to erase as it is to create.",
+  "main": "index.js",
+  "scripts": {
+    "build-tokens": "style-dictionary build -c ./style-dictionary.config.js",
+    "watch-tokens": "chokidar './design-tokens/**/*.{json,js}' -c 'npm run build-tokens'",
+    "build-css": "sass --load-path=src/tokens sass/main.scss:src/css/main.css",
+    "watch-css": "sass --load-path=src/tokens --watch sass/main.scss:src/css/main.css",
+    "build": "npm run build-tokens && npm run build-css",
+    "watch": "concurrently \"npm:watch-*\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "style-dictionary": "^3.7.2",
+    "tinycolor2": "^1.6.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.0.1",
+    "sass": "^1.62.0"
+  }
+}

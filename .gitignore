@@ -46,3 +46,13 @@ vendor/
 
 # Ignore Node.js dependency folder
 node_modules/
+
+
+# Ignore files compiled by theme
+/src/
+**/*/design-tokens.*
+**/*/_design-tokens.*
+
+# Ignore directories or files copied as backups during dev
+*.orig/
+*.orig.*

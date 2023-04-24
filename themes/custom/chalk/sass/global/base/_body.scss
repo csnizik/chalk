@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Black.ttf')
+    format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Barlow;
+  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Regular.ttf')
+    format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Battambang;
+  src: url('/themes/custom/chalk/fonts/Battambang/Battambang-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+}
+
+*,
+:root {
+  box-sizing: border-box; // b/c border-box
+}
+
+*:not(img):not(video):not(svg),
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: $fr-font-line-height-md;
+  font-size: $fr-font-size-md;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: $co-color-secondary-background;
+  font-family: $fr-font-family-body;
+  font-size: $fr-font-size-md;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fr-font-family-heading;
+  color: $co-color-secondary-contrast-best;
+}
+
+h1 {
+  font-size: $fr-font-size-xl;
+}
+
+.shad1 {
+  box-shadow: $co-box-shadows-elevated1;
+}
+.shad2 {
+  box-shadow: $co-box-shadows-elevated2;
+}
+.shad3 {
+  box-shadow: $co-box-shadows-elevated1;
+}
+.shad4 {
+  box-shadow: $co-box-shadows-elevated1;
+}
+
+@keyframes fly-in-md-springy-sm {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes fly-in-lg-springy-lg {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.fly-in-md-springy-sm {
+  position: relative;
+  animation-name: fly-in-md-springy-sm;
+  animation-delay: 0;
+  animation-duration: $fr-transition-duration-fast;
+  animation-timing-function: $fr-transition-timing-function-springy-sm;
+  animation-fill-mode: forwards;
+}
+
+.fly-in-lg-springy-lg {
+  position: relative;
+  animation-name: fly-in-lg-springy-lg;
+  animation-delay: 0;
+  animation-duration: $fr-transition-duration-slow;
+  animation-timing-function: $fr-transition-timing-function-springy-lg;
+  animation-fill-mode: forwards;
+}
+
+.card {
+  box-shadow: $co-box-shadows-elevated2;
+  padding: 30px;
+  background-color: $co-color-primary-container-background;
+  h2 {
+    color: $co-color-primary-container-contrast-best;
+  }
+}

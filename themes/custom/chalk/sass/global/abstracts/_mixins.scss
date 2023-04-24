@@ -1,0 +1,194 @@
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin visuallyHidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin srOnlyFocusable() {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $media == large {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin transition($properties...) {
+  $transition-list: ();
+  @each $property in $properties {
+    $transition-list: append(
+      $transition-list,
+      $property 0.3s ease-in-out,
+      comma
+    );
+  }
+  transition: $transition-list;
+}
+
+@mixin placeholder($style) {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+}
+
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin unstyled-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin unstyled-button() {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+@mixin unstyled-link() {
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-cover() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin box-sizing() {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+@mixin triangle($size, $color, $direction) {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if $direction == up {
+    border-width: 0 $size $size $size;
+    border-color: transparent transparent $color transparent;
+  } @else if $direction == down {
+    border-width: $size $size 0 $size;
+    border-color: $color transparent transparent transparent;
+  } @else if $direction == left {
+    border-width: $size $size $size 0;
+    border-color: transparent $color transparent transparent;
+  } @else if $direction == right {
+    border-width: $size 0 $size $size;
+    border-color: transparent transparent transparent $color;
+  }
+}
+
+@mixin rem($property, $value) {
+  #{$property}: $value;
+  #{$property}: #{$value / 16}rem;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin bg-gradient($start-color, $end-color, $direction: 'to bottom') {
+  background-image: -webkit-linear-gradient(
+    $direction,
+    $start-color,
+    $end-color
+  );
+  background-image: linear-gradient($direction, $start-color, $end-color);
+}
+
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @if $lines > 1 {
+    -webkit-line-clamp: $lines;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}

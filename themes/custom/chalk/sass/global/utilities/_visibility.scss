@@ -1,0 +1,5 @@
+@import '../abstracts/mixins';
+
+.u-is-vishidden {
+  @include visuallyHidden;
+}
