@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: #ebfaf9;
+  background-color: #336666;
   font-family: "Barlow", serif;
   font-size: 1rem;
 }
@@ -56,6 +56,7 @@ h4,
 h5,
 h6 {
   font-family: "Battambang", sans-serif;
+  color: #336666;
 }
 
 h1 {
@@ -110,6 +111,15 @@ h1 {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.33, -0.33, 0.33, 1.33);
   animation-fill-mode: forwards;
+}
+
+.card {
+  box-shadow: 0.025em 0.1em 0.1em #9a9a9a;
+  padding: 30px;
+  background-color: #f7fdfd;
+}
+.card h2 {
+  color: #336666;
 }
 
 .u-is-vishidden {

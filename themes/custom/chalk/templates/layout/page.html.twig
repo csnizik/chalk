@@ -48,40 +48,12 @@
     {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  <div style="display: flex; flex-direction: column; width: 100%; margin: 50px; justify-content: center; align-items: center;">
+  <h1>Hello from the Chalk Theme</h1>
+  <div style="display: flex; flex-direction: column; justify-content: flex-start; width: 600px; height: 220px;" class="card">
+  <h2>Card</h2>
+  <p>This is some text in the card. It will be rendered using whatevercolor I choose.</p>
+  </div>
+  </div>
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+</div>
