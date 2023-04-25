@@ -22,11 +22,11 @@ const color = {
       crepemyrtle: '#E9CDD0',
     },
     accent: {
-      crawfest: '#CC0033',
+      crawfest: '#CC0032',
       azalea: '#c6007E',
       verdigris: '#71DBD4',
     },
-    white: '#D9D9Da', // Any color with the name "black" or "white" will only generate a single token; no shades will be added.
+    white: '#FFF', // Any color with the name "black" or "white" will only generate a single token; no shades will be added.
     black: '#2e2e45',
   },
   // Add any colors that are not defined as 'brand' colors but that will need to be used anywhere on the site.
@@ -43,8 +43,6 @@ const color = {
   },
   neutral: {
     gray: '#464646',
-    black: '#000',
-    white: '#fff',
   },
 }
 
