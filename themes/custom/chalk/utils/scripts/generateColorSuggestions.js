@@ -5,7 +5,7 @@ function generateColorSuggestions(obj) {
     if (typeof obj[key] === 'object') {
       generateColorSuggestions(obj[key])
     } else if (key === 'background') {
-      const contrast = processTokens.generateContrasts(obj[key])
+      const contrast = processTokens.generateColorContrasts(obj[key])
       obj.contrast = contrast
     }
   }

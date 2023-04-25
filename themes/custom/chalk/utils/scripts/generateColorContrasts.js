@@ -14,27 +14,27 @@ const wcagAAMinContrast = 4.5
 const wcagAALargeTextMinContrast = 3
 
 function getColorMood(hsl) {
-  const [hue, saturation, lightness] = hsl
+  const [, saturation, lightness] = hsl
 
-  // Whimsical: High saturation and lightness
-  if (saturation > 50 && lightness > 50) {
-    return 'whimsical'
+  // Authoritative: Low lightness
+  if (lightness < 35) {
+    return 'a'
   }
 
   // Neutral: Low saturation
   if (saturation < 25) {
-    return 'neutral'
+    return 'b'
   }
 
-  // Authoritative: Low lightness
-  if (lightness < 35) {
-    return 'authoritative'
+  // Whimsical: High saturation and lightness
+  if (saturation > 50 && lightness > 50) {
+    return 'c'
   }
 
   return 'other'
 }
 
-function generateMoodContrasts(bgColor) {
+function generateColorContrasts(bgColor) {
   const bgToken = allTokens.find(
     (token) => `${colorPrefix}${token[0]}` === bgColor
   )
@@ -52,9 +52,9 @@ function generateMoodContrasts(bgColor) {
       .filter(({ mood }) => mood !== 'other')
       .sort((a, b) => b.contrast - a.contrast)
 
-    const moodColors = { whimsical: {}, neutral: {}, authoritative: {} }
+    const moodColors = { a: {}, b: {}, c: {} }
 
-    for (const mood of ['whimsical', 'neutral', 'authoritative']) {
+    for (const mood of ['a', 'b', 'c']) {
       const moodContrasts = contrasts.filter(
         (contrast) => contrast.mood === mood
       )
@@ -80,4 +80,4 @@ function generateMoodContrasts(bgColor) {
   }
 }
 
-module.exports = generateMoodContrasts
+module.exports = generateColorContrasts

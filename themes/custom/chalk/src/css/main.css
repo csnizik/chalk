@@ -56,7 +56,6 @@ h4,
 h5,
 h6 {
   font-family: "Battambang", sans-serif;
-  color: #B0B000;
 }
 
 h1 {
@@ -118,10 +117,6 @@ h1 {
   padding: 30px;
   background-color: #E7EEDD;
 }
-.card h2 {
-  color: #336666;
-}
-
 .u-is-vishidden {
   border: 0;
   clip: rect(0 0 0 0);

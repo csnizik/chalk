@@ -1,4 +1,4 @@
 exports.generateColorShades = require('./scripts/generateColorShades')
 exports.generateTokens = require('./scripts/generateTokens')
-exports.generateContrasts = require('./scripts/generateContrasts')
+exports.generateColorContrasts = require('./scripts/generateColorContrasts')
 exports.generateColorSuggestions = require('./scripts/generateColorSuggestions')
