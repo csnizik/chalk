@@ -13,49 +13,71 @@ const allTokens = Object.entries(allColors)
 const wcagAAMinContrast = 4.5
 const wcagAALargeTextMinContrast = 3
 
-function generateContrasts(bgColor) {
+function getColorMood(hsl) {
+  const [hue, saturation, lightness] = hsl
+
+  // Whimsical: High saturation and lightness
+  if (saturation > 50 && lightness > 50) {
+    return 'whimsical'
+  }
+
+  // Neutral: Low saturation
+  if (saturation < 25) {
+    return 'neutral'
+  }
+
+  // Authoritative: Low lightness
+  if (lightness < 35) {
+    return 'authoritative'
+  }
+
+  return 'other'
+}
+
+function generateMoodContrasts(bgColor) {
   const bgToken = allTokens.find(
     (token) => `${colorPrefix}${token[0]}` === bgColor
   )
 
   if (bgToken) {
     const bgValue = bgToken[1].value
-    const contrasts = allTokens.map((token) => {
-      const tokenName = token[0]
-      const tokenValue = token[1].value
-      const contrast = Color(bgValue).contrast(Color(tokenValue))
-      return { tokenName, contrast, tokenValue }
-    })
+    const contrasts = allTokens
+      .map((token) => {
+        const tokenName = token[0]
+        const tokenValue = token[1].value
+        const contrast = Color(bgValue).contrast(Color(tokenValue))
+        const mood = getColorMood(Color(tokenValue).hsl().array())
+        return { tokenName, contrast, tokenValue, mood }
+      })
+      .filter(({ mood }) => mood !== 'other')
+      .sort((a, b) => b.contrast - a.contrast)
 
-    const sortedContrasts = contrasts.sort((a, b) => b.contrast - a.contrast)
+    const moodColors = { whimsical: {}, neutral: {}, authoritative: {} }
 
-    let bestIndex = sortedContrasts.findIndex(
-      (contrast) => contrast.contrast >= wcagAAMinContrast
-    )
-    let betterIndex = sortedContrasts.findIndex(
-      (contrast, index) =>
-        contrast.contrast >= wcagAALargeTextMinContrast && index !== bestIndex
-    )
-    let goodIndex = sortedContrasts.findIndex(
-      (contrast, index) => index !== bestIndex && index !== betterIndex
-    )
+    for (const mood of ['whimsical', 'neutral', 'authoritative']) {
+      const moodContrasts = contrasts.filter(
+        (contrast) => contrast.mood === mood
+      )
 
-    const topContrastColors = {
-      best: colorPrefix + sortedContrasts[bestIndex]?.tokenName || '',
+      if (moodContrasts.length > 0) {
+        moodColors[mood].good = colorPrefix + moodContrasts[0].tokenName
+      }
+      if (
+        moodContrasts.length > 1 &&
+        moodContrasts[1].contrast >= wcagAALargeTextMinContrast
+      ) {
+        moodColors[mood].better = colorPrefix + moodContrasts[1].tokenName
+      }
+      if (
+        moodContrasts.length > 2 &&
+        moodContrasts[2].contrast >= wcagAAMinContrast
+      ) {
+        moodColors[mood].best = colorPrefix + moodContrasts[2].tokenName
+      }
     }
 
-    if (betterIndex >= 0) {
-      topContrastColors.better =
-        colorPrefix + sortedContrasts[betterIndex]?.tokenName
-    }
-
-    if (goodIndex >= 0) {
-      topContrastColors.good =
-        colorPrefix + sortedContrasts[goodIndex]?.tokenName
-    }
-
-    return topContrastColors
+    return moodColors
   }
 }
 
-module.exports = generateContrasts
+module.exports = generateMoodContrasts
