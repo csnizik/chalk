@@ -1,5 +1,6 @@
 const Color = require('color')
 
+// Generates shades for each color and skips generating shades when specified
 const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
   return Object.entries(nestedColors).reduce((r, [colorKey, colorValue]) => {
     const formattedColorKey = colorKey
@@ -58,6 +59,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
 
     const shadeKeys = [20, 40, 60, 80, 120, 140]
 
+    // Checks if the luminosity difference between two shades is valid
     const isLuminosityDifferenceValid = (shade1, shade2) => {
       return (
         Math.abs(shade1.luminosity() - shade2.luminosity()) > blackThreshold
@@ -86,10 +88,10 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
       }
     }
 
-    // Filter shades to make sure no whites snuck in (this can be removed if it is found to be useless)
+    // Filter shades to make sure no pure whites or pure blacks are included, then create the final object.
     const filteredShades = Object.entries(shades).reduce(
       (acc, [shadeKey, shadeValue]) => {
-        if (shadeValue !== '#FFFFFF') {
+        if (shadeValue !== '#FFFFFF' && shadeValue !== '#000000') {
           acc[
             `${prefix}-${formattedColorKey}${
               shadeKey !== '100' ? '-' + shadeKey : ''
@@ -110,6 +112,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
   }, {})
 }
 
+// Generates color shades for each color in the colors object
 const generateColorShades = (colors) => {
   return Object.keys(colors).reduce((result, prefix) => {
     const nestedColors = colors[prefix]
