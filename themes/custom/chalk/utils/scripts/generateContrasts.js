@@ -1,6 +1,8 @@
 const tinycolor = require('tinycolor2')
 const colorTokens = require('../../design-tokens/1-framework/color')
 
+console.log('hi', colorTokens)
+
 function camelToKebab(str) {
   return str
     .replace(/([a-z])([A-Z])/g, '$1-$2') // Add hyphen between lower and uppercase letters
@@ -33,6 +35,7 @@ function generateContrasts(bgColor) {
       better: colorPrefix + sortedContrasts[1]?.tokenName || '',
       best: colorPrefix + sortedContrasts[0]?.tokenName || '',
     }
+    console.log('hi again', topContrastColors)
     return topContrastColors
   }
 }
