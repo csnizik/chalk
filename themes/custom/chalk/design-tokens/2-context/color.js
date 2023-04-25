@@ -6,7 +6,7 @@ const color = {
     // trueHeading: ``, Uncomment and use to override suggestions
     // trueText: `$fr-color-core-true-red`,
     container: {
-      background: `$fr-color-brand-accent-verdigris-20`,
+      background: `$fr-color-brand-medallion-40`,
       // trueHeading: ``,
       // trueText: ``,
     },

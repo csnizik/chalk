@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: #336666;
+  background-color: #ebfaf9;
   font-family: "Barlow", serif;
   font-size: 1rem;
 }
@@ -56,7 +56,7 @@ h4,
 h5,
 h6 {
   font-family: "Battambang", sans-serif;
-  color: #feffff;
+  color: #000;
 }
 
 h1 {
@@ -116,10 +116,10 @@ h1 {
 .card {
   box-shadow: 0.025em 0.1em 0.1em #929292;
   padding: 30px;
-  background-color: #ebfaf9;
+  background-color: #ffd24d;
 }
 .card h2 {
-  color: #464646;
+  color: #000;
 }
 
 .u-is-vishidden {
