@@ -18,7 +18,6 @@ function generateContrasts(bgColor) {
     (token) => `${colorPrefix}${token[0]}` === bgColor
   )
   if (bgToken) {
-    console.log('bgT', bgToken)
     const bgValue = bgToken[1].value
     const contrasts = allTokens.map((token) => {
       const tokenName = token[0]

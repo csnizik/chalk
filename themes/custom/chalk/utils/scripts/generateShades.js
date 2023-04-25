@@ -44,6 +44,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
 
     const filteredShades = Object.entries(shades).reduce(
       (acc, [shadeKey, shadeValue]) => {
+        // TODO - this disallows white as a shade but #FFFFFE would be generated, which has no visual difference to white. Improve this test to make sure we don't generate shades that are indistinguishable from existing tokenized colors.
         if (shadeValue !== '#FFFFFF') {
           acc[
             `${prefix}-${formattedColorKey}${
