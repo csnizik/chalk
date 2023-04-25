@@ -38,6 +38,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
     const baseLuminosity = currColor.luminosity()
     const lightenStep = (1 - baseLuminosity) / 5
     const darkenStep = baseLuminosity / 3
+    // TODO: make these CONSTANTS b/c they are also used in generateContrasts and should be in sync
     const whiteThreshold = 0.9
     const blackThreshold = 0.04
 

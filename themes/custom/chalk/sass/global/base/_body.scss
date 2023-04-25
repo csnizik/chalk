@@ -61,7 +61,7 @@ h4,
 h5,
 h6 {
   font-family: $fr-font-family-heading;
-  color: $co-color-primary-container-contrast-best;
+  color: $co-color-primary-contrast-best;
 }
 
 h1 {
@@ -120,8 +120,8 @@ h1 {
 .card {
   box-shadow: $co-box-shadows-elevated2;
   padding: 30px;
-  background-color: $co-color-primary-container-background;
+  background-color: $co-color-secondary-container-background;
   h2 {
-    color: $co-color-primary-container-contrast-best;
+    color: $co-color-secondary-container-contrast-better;
   }
 }
