@@ -14,4 +14,4 @@ const spacing = {
   xxxl: '5em',
 }
 
-module.exports = { frSpacing: processTokens.generateTokens(spacing) }
+module.exports = { founSpacing: processTokens.generateTokens(spacing) }

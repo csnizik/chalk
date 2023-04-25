@@ -47,5 +47,5 @@ const color = {
 }
 
 module.exports = {
-  frColor: processTokens.generateColorShades(color),
+  founColor: processTokens.generateColorShades(color),
 }

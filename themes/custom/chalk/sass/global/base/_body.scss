@@ -41,17 +41,17 @@
 }
 
 html {
-  line-height: $fr-font-line-height-md;
-  font-size: $fr-font-size-md;
+  line-height: $foun-font-line-height-md;
+  font-size: $foun-font-size-md;
 }
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: $co-color-primary-background;
-  font-family: $fr-font-family-body;
-  font-size: $fr-font-size-md;
+  background-color: $cont-color-primary-background;
+  font-family: $foun-font-family-body;
+  font-size: $foun-font-size-md;
 }
 
 h1,
@@ -60,25 +60,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $fr-font-family-heading;
-  color: $co-color-primary-contrast-authoritative-good;
+  font-family: $foun-font-family-heading;
+  color: $cont-color-primary-contrast-authoritative-good;
 }
 
 h1 {
-  font-size: $fr-font-size-xl;
+  font-size: $foun-font-size-xl;
 }
 
 .shad1 {
-  box-shadow: $co-box-shadows-elevated1;
+  box-shadow: $cont-box-shadows-elevated1;
 }
 .shad2 {
-  box-shadow: $co-box-shadows-elevated2;
+  box-shadow: $cont-box-shadows-elevated2;
 }
 .shad3 {
-  box-shadow: $co-box-shadows-elevated1;
+  box-shadow: $cont-box-shadows-elevated1;
 }
 .shad4 {
-  box-shadow: $co-box-shadows-elevated1;
+  box-shadow: $cont-box-shadows-elevated1;
 }
 
 @keyframes fly-in-md-springy-sm {
@@ -103,8 +103,8 @@ h1 {
   position: relative;
   animation-name: fly-in-md-springy-sm;
   animation-delay: 0;
-  animation-duration: $fr-transition-duration-fast;
-  animation-timing-function: $fr-transition-timing-function-springy-sm;
+  animation-duration: $foun-transition-duration-fast;
+  animation-timing-function: $foun-transition-timing-function-springy-sm;
   animation-fill-mode: forwards;
 }
 
@@ -112,16 +112,16 @@ h1 {
   position: relative;
   animation-name: fly-in-lg-springy-lg;
   animation-delay: 0;
-  animation-duration: $fr-transition-duration-slow;
-  animation-timing-function: $fr-transition-timing-function-springy-lg;
+  animation-duration: $foun-transition-duration-slow;
+  animation-timing-function: $foun-transition-timing-function-springy-lg;
   animation-fill-mode: forwards;
 }
 
 .card {
-  box-shadow: $co-box-shadows-elevated2;
+  box-shadow: $cont-box-shadows-elevated2;
   padding: 30px;
-  background-color: $co-color-secondary-container-background;
+  background-color: $cont-color-secondary-container-background;
   h2 {
-    color: $co-color-secondary-container-contrast-authoritative-best;
+    color: $cont-color-secondary-container-contrast-authoritative-best;
   }
 }

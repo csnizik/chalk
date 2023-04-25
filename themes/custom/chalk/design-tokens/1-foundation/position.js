@@ -6,4 +6,4 @@ const position = {
   fixed: 'fixed',
 }
 
-module.exports = { frPosition: processTokens.generateTokens(position) }
+module.exports = { founPosition: processTokens.generateTokens(position) }

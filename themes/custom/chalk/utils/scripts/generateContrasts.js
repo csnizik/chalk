@@ -1,5 +1,5 @@
 const Color = require('color')
-const colorTokens = require('../../design-tokens/1-framework/color')
+const colorTokens = require('../../design-tokens/1-foundation/color')
 
 function camelToKebab(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
