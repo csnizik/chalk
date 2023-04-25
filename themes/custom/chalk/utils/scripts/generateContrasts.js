@@ -14,19 +14,28 @@ const allColors = Object.values(colorTokens)[0]
 const allTokens = Object.entries(allColors)
 
 function generateContrasts(bgColor) {
-  const contrasts = allTokens.map(([tokenName, value]) => {
-    const contrast = tinycolor.readability(bgColor, value)
-    return { tokenName, contrast }
-  })
+  const bgToken = allTokens.find(
+    (token) => `${colorPrefix}${token[0]}` === bgColor
+  )
+  if (bgToken) {
+    console.log('bgT', bgToken)
+    const bgValue = bgToken[1].value
+    const contrasts = allTokens.map((token) => {
+      const tokenName = token[0]
+      const tokenValue = token[1].value
+      const contrast = tinycolor.readability(bgValue, tokenValue)
+      return { tokenName, contrast }
+    })
 
-  const sortedContrasts = contrasts.sort((a, b) => b.contrast - a.contrast)
+    const sortedContrasts = contrasts.sort((a, b) => b.contrast - a.contrast)
 
-  const topContrastColors = {
-    good: colorPrefix + sortedContrasts[2]?.tokenName || '',
-    better: colorPrefix + sortedContrasts[1]?.tokenName || '',
-    best: colorPrefix + sortedContrasts[0]?.tokenName || '',
+    const topContrastColors = {
+      good: colorPrefix + sortedContrasts[2]?.tokenName || '',
+      better: colorPrefix + sortedContrasts[1]?.tokenName || '',
+      best: colorPrefix + sortedContrasts[0]?.tokenName || '',
+    }
+    return topContrastColors
   }
-  return topContrastColors
 }
 
 module.exports = generateContrasts

@@ -1,4 +1,4 @@
-const Color = require('tinycolor2')
+const tinycolor = require('tinycolor2')
 
 const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
   return Object.entries(nestedColors).reduce((r, [colorKey, colorValue]) => {
@@ -6,7 +6,7 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
       .replace(/([a-z])([A-Z])/g, '$1-$2')
       .toLowerCase()
 
-    if (typeof colorValue === 'object' && !Color(colorValue).isValid()) {
+    if (typeof colorValue === 'object' && !tinycolor(colorValue).isValid()) {
       const nestedSkipShades = colorKey === 'true'
       const nestedShades = generateNestedShades(
         `${prefix}-${formattedColorKey}`,
@@ -34,18 +34,17 @@ const generateNestedShades = (prefix, nestedColors, skipShades = false) => {
     }
 
     const shades = {
-      10: Color(colorValue).lighten(33).toString(),
-      20: Color(colorValue).lighten(30).toString(),
-      40: Color(colorValue).lighten(25).toString(),
-      50: Color(colorValue).lighten(22).toString(),
-      60: Color(colorValue).lighten(20).toString(),
-      80: Color(colorValue).lighten(10).toString(),
+      20: tinycolor(colorValue).lighten(30).toString(),
+      40: tinycolor(colorValue).lighten(25).toString(),
+      50: tinycolor(colorValue).lighten(22).toString(),
+      60: tinycolor(colorValue).lighten(20).toString(),
+      80: tinycolor(colorValue).lighten(10).toString(),
       100: colorValue,
     }
 
     const filteredShades = Object.entries(shades).reduce(
       (acc, [shadeKey, shadeValue]) => {
-        if (shadeValue !== '#ffffff') {
+        if (shadeValue !== '#FFFFFF') {
           acc[
             `${prefix}-${formattedColorKey}${
               shadeKey !== '100' ? '-' + shadeKey : ''
