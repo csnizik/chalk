@@ -53,31 +53,43 @@ function generateColorContrasts(bgColor) {
       .filter(({ mood }) => mood !== 'other')
       .sort((a, b) => b.contrast - a.contrast)
 
-    const moodColors = { a: {}, b: {}, c: {} }
+    const contrastLevels = { best: {}, better: {}, good: {} }
 
-    for (const mood of ['a', 'b', 'c']) {
-      const moodContrasts = contrasts.filter(
-        (contrast) => contrast.mood === mood
-      )
+    for (const level of ['best', 'better', 'good']) {
+      for (const mood of ['a', 'b', 'c']) {
+        const matchingMoods = contrasts.filter(
+          (contrast) => contrast.mood === mood
+        )
 
-      if (moodContrasts.length > 0) {
-        moodColors[mood].good = colorPrefix + moodContrasts[0].tokenName
-      }
-      if (
-        moodContrasts.length > 1 &&
-        moodContrasts[1].contrast >= wcagAALargeTextMinContrast
-      ) {
-        moodColors[mood].better = colorPrefix + moodContrasts[1].tokenName
-      }
-      if (
-        moodContrasts.length > 2 &&
-        moodContrasts[2].contrast >= wcagAAMinContrast
-      ) {
-        moodColors[mood].best = colorPrefix + moodContrasts[2].tokenName
+        if (matchingMoods.length > 0) {
+          const selectedItem = matchingMoods.shift()
+          const contrastValue = selectedItem.contrast
+          const colorName = `${colorPrefix}${selectedItem.tokenName}`
+
+          contrastLevels[level][mood] = colorName
+
+          if (
+            contrastValue < wcagAAMinContrast &&
+            contrastValue >= wcagAALargeTextMinContrast
+          ) {
+            console.log(`${colorName} has a contrast value of ${contrastValue}`)
+          } else if (
+            contrastValue < wcagAALargeTextMinContrast &&
+            contrastValue >= wcagAMinContrast
+          ) {
+            console.log(
+              `${colorName} has a contrast value of ${contrastValue} which only meets WCAG (A) minimum contrast`
+            )
+          } else if (contrastValue < wcagAMinContrast) {
+            console.log(
+              `${colorName} has a contrast value of ${contrastValue} which doesn't meet WCAG (A) minimum`
+            )
+          }
+        }
       }
     }
 
-    return moodColors
+    return contrastLevels
   }
 }
 
