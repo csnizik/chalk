@@ -17,17 +17,14 @@ const wcagAMinContrast = 2
 function getColorMood(hsl) {
   const [, saturation, lightness] = hsl
 
-  // Authoritative: Low lightness
   if (lightness < 35) {
     return 'a'
   }
 
-  // Neutral: Low saturation
   if (saturation < 25) {
     return 'b'
   }
 
-  // Whimsical: High saturation and lightness
   if (saturation > 50 && lightness > 50) {
     return 'c'
   }
@@ -54,6 +51,7 @@ function generateColorContrasts(bgColor) {
       .sort((a, b) => b.contrast - a.contrast)
 
     const contrastLevels = { best: {}, better: {}, good: {} }
+    const usedColors = new Set()
 
     for (const level of ['best', 'better', 'good']) {
       for (const mood of ['a', 'b', 'c']) {
@@ -61,29 +59,34 @@ function generateColorContrasts(bgColor) {
           (contrast) => contrast.mood === mood
         )
 
-        if (matchingMoods.length > 0) {
-          const selectedItem = matchingMoods.shift()
-          const contrastValue = selectedItem.contrast
-          const colorName = `${colorPrefix}${selectedItem.tokenName}`
+        for (const selectedItem of matchingMoods) {
+          if (!usedColors.has(selectedItem.tokenName)) {
+            const contrastValue = selectedItem.contrast
+            const colorName = `${colorPrefix}${selectedItem.tokenName}`
 
-          contrastLevels[level][mood] = colorName
+            contrastLevels[level][mood] = colorName
+            usedColors.add(selectedItem.tokenName)
 
-          if (
-            contrastValue < wcagAAMinContrast &&
-            contrastValue >= wcagAALargeTextMinContrast
-          ) {
-            console.log(`${colorName} has a contrast value of ${contrastValue}`)
-          } else if (
-            contrastValue < wcagAALargeTextMinContrast &&
-            contrastValue >= wcagAMinContrast
-          ) {
-            console.log(
-              `${colorName} has a contrast value of ${contrastValue} which only meets WCAG (A) minimum contrast`
-            )
-          } else if (contrastValue < wcagAMinContrast) {
-            console.log(
-              `${colorName} has a contrast value of ${contrastValue} which doesn't meet WCAG (A) minimum`
-            )
+            if (
+              contrastValue < wcagAAMinContrast &&
+              contrastValue >= wcagAALargeTextMinContrast
+            ) {
+              console.log(
+                `${colorName} has a contrast value of ${contrastValue}`
+              )
+            } else if (
+              contrastValue < wcagAALargeTextMinContrast &&
+              contrastValue >= wcagAMinContrast
+            ) {
+              console.log(
+                `${colorName} has a contrast value of ${contrastValue} which only meets WCAG (A) minimum contrast`
+              )
+            } else if (contrastValue < wcagAMinContrast) {
+              console.log(
+                `${colorName} has a contrast value of ${contrastValue} which doesn't meet WCAG (A) minimum`
+              )
+            }
+            break
           }
         }
       }
