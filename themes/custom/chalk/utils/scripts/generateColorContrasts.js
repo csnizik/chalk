@@ -12,6 +12,7 @@ const allTokens = Object.entries(allColors)
 
 const wcagAAMinContrast = 4.5
 const wcagAALargeTextMinContrast = 3
+const wcagAMinContrast = 2
 
 function getColorMood(hsl) {
   const [, saturation, lightness] = hsl
