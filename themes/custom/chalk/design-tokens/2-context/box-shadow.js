@@ -2,7 +2,7 @@ const processTokens = require('../../utils/processTokens')
 
 const boxShadowColor = 'rgba(46, 46, 69, '
 
-const boxShadows = {
+const boxShadow = {
   elevated1: `$foun-spacing-xxxs $foun-spacing-xxxs $foun-spacing-xxs ${boxShadowColor}0.2)`,
   elevated2: `$foun-spacing-xxs $foun-spacing-xxs $foun-spacing-xxs ${boxShadowColor}0.3)`,
   elevated3: `$foun-spacing-xxs $foun-spacing-xxs $foun-spacing-xs ${boxShadowColor}0.4)`,
@@ -14,4 +14,4 @@ const boxShadows = {
   elevated24: `$foun-spacing-xl $foun-spacing-xxl $foun-spacing-xxl ${boxShadowColor}1)`,
 }
 
-module.exports = { contBoxShadows: processTokens.generateTokens(boxShadows) }
+module.exports = { contBoxShadow: processTokens.generateTokens(boxShadow) }

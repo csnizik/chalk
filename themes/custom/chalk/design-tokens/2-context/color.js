@@ -31,6 +31,13 @@ const color = {
       // trueText: ``,
     },
   },
+  status: {
+    success: `$foun-color-brand-mardigras-80`,
+    disabled: `$foun-color-brand-neutral-spanishmoss-40`,
+    error: `$foun-color-brand-accent-crawfest`,
+    warning: `$foun-color-brand-medallion-80`,
+    info: `$foun-color-brand-avenueblue-20`,
+  },
 }
 
 processTokens.generateColorSuggestions(color)

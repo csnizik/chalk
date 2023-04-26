@@ -67,14 +67,6 @@ h1 {
   box-shadow: 0.025em 0.025em 0.1em rgba(46, 46, 69, 0.2);
 }
 
-.shad2 {
-  box-shadow: 0.1em 0.1em 0.1em rgba(46, 46, 69, 0.3);
-}
-
-.shad3 {
-  box-shadow: 0.1em 0.1em 0.25em rgba(46, 46, 69, 0.4);
-}
-
 @keyframes fly-in-md-springy-sm {
   0% {
     left: -100%;

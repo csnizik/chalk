@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "color": "^4.2.3",
-    "fs": "^0.0.1-security",
     "style-dictionary": "^3.7.2",
     "tinycolor2": "^1.6.0"
   },

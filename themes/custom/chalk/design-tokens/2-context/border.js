@@ -3,11 +3,12 @@ const processTokens = require('../../utils/processTokens')
 // Using em here instead of rem for more accurate proportional sizing
 
 const border = {
-  borderStyle: {
-    solid: 'solid',
+  style: {
     groove: 'groove',
+    none: 'none',
+    solid: 'solid',
   },
-  borderRadius: {
+  radius: {
     xs: `$foun-spacing-xs`,
     sm: `$foun-spacing-sm`,
     md: `$foun-spacing-md`,
@@ -16,7 +17,7 @@ const border = {
     xxl: `$foun-spacing-xxl`,
     xxxl: `$foun-spacing-xxxl`,
   },
-  borderWidth: {
+  width: {
     xxs: `$foun-spacing-xxs`,
     xs: `$foun-spacing-xs`,
     sm: `$foun-spacing-sm`,

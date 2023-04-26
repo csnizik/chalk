@@ -69,13 +69,7 @@ h1 {
 }
 
 .shad1 {
-  box-shadow: $cont-box-shadows-elevated1;
-}
-.shad2 {
-  box-shadow: $cont-box-shadows-elevated2;
-}
-.shad3 {
-  box-shadow: $cont-box-shadows-elevated3;
+  box-shadow: $cont-box-shadow-elevated1;
 }
 
 @keyframes fly-in-md-springy-sm {
@@ -114,7 +108,7 @@ h1 {
   animation-fill-mode: forwards;
 }
 .card {
-  box-shadow: $cont-box-shadows-elevated1;
+  box-shadow: $cont-box-shadow-elevated1;
   padding: 30px;
   background-color: invert($cont-color-secondary-container-background);
   width: 800px;
@@ -130,56 +124,56 @@ h1 {
 
 .card2 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated2;
+  box-shadow: $cont-box-shadow-elevated2;
   width: 800px;
   height: 800px;
 }
 
 .card3 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated3;
+  box-shadow: $cont-box-shadow-elevated3;
   width: 700px;
   height: 700px;
 }
 
 .card4 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated4;
+  box-shadow: $cont-box-shadow-elevated4;
   width: 600px;
   height: 600px;
 }
 
 .card6 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated6;
+  box-shadow: $cont-box-shadow-elevated6;
   width: 500px;
   height: 500px;
 }
 
 .card8 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated8;
+  box-shadow: $cont-box-shadow-elevated8;
   width: 400px;
   height: 400px;
 }
 
 .card12 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated12;
+  box-shadow: $cont-box-shadow-elevated12;
   width: 300px;
   height: 300px;
 }
 
 .card16 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated16;
+  box-shadow: $cont-box-shadow-elevated16;
   width: 200px;
   height: 200px;
 }
 
 .card24 {
   @extend .card;
-  box-shadow: $cont-box-shadows-elevated24;
+  box-shadow: $cont-box-shadow-elevated24;
   width: 100px;
   height: 100px;
 }
