@@ -1,59 +1,13 @@
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Black.ttf')
-    format('truetype');
-  font-weight: 900;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Bold.ttf')
-    format('truetype');
-  font-weight: 700;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Medium.ttf')
-    format('truetype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Regular.ttf')
-    format('truetype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: Battambang;
-  src: url('/themes/custom/chalk/fonts/Battambang/Battambang-Bold.ttf')
-    format('truetype');
-  font-weight: 700;
-}
-
-*,
-:root {
-  box-sizing: border-box; // b/c border-box
-}
-
-*:not(img):not(video):not(svg),
-*:after,
-*:before {
-  box-sizing: inherit;
-}
-
-html {
-  line-height: $foun-font-line-height-md;
-  font-size: $foun-font-size-md;
-}
-
+// Typography
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: invert($cont-color-tertiary-background);
   font-family: $foun-font-family-body;
+  font-weight: $foun-font-weight-regular;
   font-size: $foun-font-size-md;
+  line-height: $foun-font-line-height-md;
+  color: $foun-color-brand-black;
 }
 
+// Headings
 h1,
 h2,
 h3,
@@ -61,119 +15,118 @@ h4,
 h5,
 h6 {
   font-family: $foun-font-family-heading;
-  color: invert($cont-color-tertiary-contrast-best-a);
+  font-weight: $foun-font-weight-semibold;
+  color: $foun-color-brand-true-tulanegreen;
 }
 
 h1 {
+  font-size: $foun-font-size-xxl;
+}
+
+h2 {
   font-size: $foun-font-size-xl;
 }
 
-.shad1 {
+h3 {
+  font-size: $foun-font-size-lg;
+}
+
+h4 {
+  font-size: $foun-font-size-md;
+}
+
+h5 {
+  font-size: $foun-font-size-sm;
+}
+
+h6 {
+  font-size: $foun-font-size-xs;
+}
+
+// Background
+body {
+  background-color: $cont-color-primary-background;
+}
+
+// Containers
+.container {
+  background-color: $cont-color-primary-container-background;
+  border-radius: $cont-border-radius-md;
+  padding: $foun-spacing-md;
   box-shadow: $cont-box-shadow-elevated1;
+  color: $cont-color-primary-container-contrast-best-a;
 }
 
-@keyframes fly-in-md-springy-sm {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
+// Links
+a {
+  color: $foun-color-brand-true-tulaneblue;
+  text-decoration: none;
+  transition: color $foun-transition-duration-fast
+    $foun-transition-timing-function-ease-in-out;
 
-@keyframes fly-in-lg-springy-lg {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
+  &:hover,
+  &:focus {
+    color: $foun-color-brand-avenueblue;
   }
 }
 
-.fly-in-md-springy-sm {
-  position: relative;
-  animation-name: fly-in-md-springy-sm;
-  animation-delay: 0;
-  animation-duration: $foun-transition-duration-fast;
-  animation-timing-function: $foun-transition-timing-function-springy-sm;
-  animation-fill-mode: forwards;
+// Utilities
+.hidden {
+  display: $foun-display-none;
 }
 
-.fly-in-lg-springy-lg {
-  position: relative;
-  animation-name: fly-in-lg-springy-lg;
-  animation-delay: 0;
-  animation-duration: $foun-transition-duration-slow;
-  animation-timing-function: $foun-transition-timing-function-springy-lg;
-  animation-fill-mode: forwards;
-}
-.card {
-  box-shadow: $cont-box-shadow-elevated1;
-  padding: 30px;
-  background-color: invert($cont-color-secondary-container-background);
-  width: 800px;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    color: invert($cont-color-secondary-container-contrast-best-c);
-  }
+.visible {
+  display: $foun-display-block;
 }
 
-.card2 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated2;
-  width: 800px;
-  height: 800px;
+.flex {
+  display: $foun-display-flex;
 }
 
-.card3 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated3;
-  width: 700px;
-  height: 700px;
+.inline-flex {
+  display: $foun-display-inline-flex;
 }
 
-.card4 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated4;
-  width: 600px;
-  height: 600px;
+.block {
+  display: $foun-display-block;
 }
 
-.card6 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated6;
-  width: 500px;
-  height: 500px;
+.inline-block {
+  display: $foun-display-inline-block;
 }
 
-.card8 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated8;
-  width: 400px;
-  height: 400px;
+.text-center {
+  text-align: center;
 }
 
-.card12 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated12;
-  width: 300px;
-  height: 300px;
+.text-right {
+  text-align: right;
 }
 
-.card16 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated16;
-  width: 200px;
-  height: 200px;
+.text-left {
+  text-align: left;
 }
 
-.card24 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated24;
-  width: 100px;
-  height: 100px;
+.mb-xs {
+  margin-bottom: $foun-spacing-xs;
+}
+
+.mb-sm {
+  margin-bottom: $foun-spacing-sm;
+}
+
+.mb-md {
+  margin-bottom: $foun-spacing-md;
+}
+
+.mb-lg {
+  margin-bottom: $foun-spacing-lg;
+}
+
+.mb-xl {
+  margin-bottom: $foun-spacing-xl;
+}
+
+.mb-xxl {
+  margin-bottom: $foun-spacing-xxl;
 }
