@@ -39,4 +39,4 @@ const font = {
   },
 }
 
-module.exports = { frFont: processTokens.generateTokens(font) }
+module.exports = { founFont: processTokens.generateTokens(font) }

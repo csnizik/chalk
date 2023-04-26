@@ -21,5 +21,5 @@ const background = {
 }
 
 module.exports = {
-  frBackground: processTokens.generateTokens(background),
+  founBackground: processTokens.generateTokens(background),
 }

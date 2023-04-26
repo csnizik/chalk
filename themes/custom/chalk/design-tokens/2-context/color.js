@@ -2,70 +2,44 @@ const processTokens = require('../../utils/processTokens')
 
 const color = {
   primary: {
-    background: `$fr-color-brand-accent-verdigris-20`,
+    background: `$foun-color-neutral-gray`,
     // trueHeading: ``, Uncomment and use to override suggestions
-    // trueText: `$fr-color-core-true-red`,
+    // trueText: `$foun-color-core-true-red`,
     container: {
-      background: `$fr-color-brand-medallion-40`,
+      background: `$foun-color-brand-medallion-20`,
       // trueHeading: ``,
       // trueText: ``,
     },
   },
   secondary: {
-    background: `$fr-color-brand-true-tulanegreen`,
+    background: `$foun-color-brand-true-tulanegreen`,
     // trueHeading: ``,
     // trueText: ``,
     container: {
-      background: `$fr-color-brand-olivebranch-20`,
+      background: `$foun-color-brand-neutral-limestone-60`,
       // trueHeading: ``,
       // trueText: ``,
     },
   },
   tertiary: {
-    background: `$fr-color-brand-accent-verdigris-20`,
+    background: `$foun-color-brand-accent-verdigris-20`,
     // trueHeading: ``,
     // trueText: ``,
     container: {
-      background: `$fr-color-brand-olivebranch-20`,
+      background: `$foun-color-brand-olivebranch-20`,
       // trueHeading: ``,
       // trueText: ``,
     },
   },
-}
-
-function updateColorContrasts(obj) {
-  for (const key in obj) {
-    if (typeof obj[key] === 'object') {
-      updateColorContrasts(obj[key])
-    } else if (key === 'background') {
-      if (obj.trueHeading === '' || obj.trueText === '') {
-        try {
-          throw new Error(
-            'trueHeading or trueText is empty. Please provide a value.'
-          )
-        } catch (err) {
-          console.error(err.message)
-          return
-        }
-      }
-
-      if (!obj.trueHeading) {
-        const contrastHeading = processTokens.generateContrasts(obj[key])
-        obj.heading = contrastHeading
-      } else {
-        obj.heading = obj.trueHeading
-      }
-
-      if (!obj.trueText) {
-        const contrastText = processTokens.generateContrasts(obj[key])
-        obj.text = contrastText
-      } else {
-        obj.text = obj.trueText
-      }
-    }
-  }
+  status: {
+    success: `$foun-color-brand-mardigras-80`,
+    disabled: `$foun-color-brand-neutral-spanishmoss-40`,
+    error: `$foun-color-brand-accent-crawfest`,
+    warning: `$foun-color-brand-medallion-80`,
+    info: `$foun-color-brand-avenueblue-20`,
+  },
 }
 
 processTokens.generateColorSuggestions(color)
 
-module.exports = { coColor: processTokens.generateTokens(color) }
+module.exports = { contColor: processTokens.generateTokens(color) }
