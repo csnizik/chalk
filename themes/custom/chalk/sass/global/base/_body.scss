@@ -49,7 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  background-color: $cont-color-primary-background;
+  background-color: invert($cont-color-tertiary-background);
   font-family: $foun-font-family-body;
   font-size: $foun-font-size-md;
 }
@@ -61,7 +61,7 @@ h4,
 h5,
 h6 {
   font-family: $foun-font-family-heading;
-  color: $cont-color-primary-contrast-best-c;
+  color: invert($cont-color-tertiary-contrast-best-a);
 }
 
 h1 {
@@ -75,10 +75,7 @@ h1 {
   box-shadow: $cont-box-shadows-elevated2;
 }
 .shad3 {
-  box-shadow: $cont-box-shadows-elevated1;
-}
-.shad4 {
-  box-shadow: $cont-box-shadows-elevated1;
+  box-shadow: $cont-box-shadows-elevated3;
 }
 
 @keyframes fly-in-md-springy-sm {
@@ -116,12 +113,73 @@ h1 {
   animation-timing-function: $foun-transition-timing-function-springy-lg;
   animation-fill-mode: forwards;
 }
-
 .card {
-  box-shadow: $cont-box-shadows-elevated2;
+  box-shadow: $cont-box-shadows-elevated1;
   padding: 30px;
-  background-color: $cont-color-secondary-container-background;
+  background-color: invert($cont-color-secondary-container-background);
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h2 {
-    color: $cont-color-secondary-container-contrast-best-c;
+    color: invert($cont-color-secondary-container-contrast-best-c);
   }
+}
+
+.card2 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated2;
+  width: 800px;
+  height: 800px;
+}
+
+.card3 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated3;
+  width: 700px;
+  height: 700px;
+}
+
+.card4 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated4;
+  width: 600px;
+  height: 600px;
+}
+
+.card6 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated6;
+  width: 500px;
+  height: 500px;
+}
+
+.card8 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated8;
+  width: 400px;
+  height: 400px;
+}
+
+.card12 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated12;
+  width: 300px;
+  height: 300px;
+}
+
+.card16 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated16;
+  width: 200px;
+  height: 200px;
+}
+
+.card24 {
+  @extend .card;
+  box-shadow: $cont-box-shadows-elevated24;
+  width: 100px;
+  height: 100px;
 }
