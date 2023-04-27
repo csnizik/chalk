@@ -1,0 +1,7 @@
+custom_theme_settings.admin:
+  path: '/admin/chalk-theme-settings'
+  defaults:
+    _form: 'Drupal\chalk_module\Form\ChalkModuleSettingsForm'
+    _title: 'Chalk Theme Settings'
+  requirements:
+    _permission: 'administer themes'
