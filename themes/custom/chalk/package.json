@@ -10,6 +10,7 @@
     "watch-css": "sass --load-path=src/tokens --watch sass/main.scss:src/css/main.css",
     "build": "npm run build-tokens && npm run build-css",
     "watch": "concurrently \"npm:watch-*\"",
+    "storybook": "start-storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
