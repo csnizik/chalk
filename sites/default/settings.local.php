@@ -151,5 +151,8 @@ $settings['skip_permissions_hardening'] = TRUE;
  * guarantees the configuration synchronization provides. It is not recommended
  * to use this feature with modules that affect Drupal in a major way such as
  * the language or field module.
+ * 
+ * 4/27/23 - uncommenting the following line and adding one more module, cl_server
  */
-# $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+$settings['config_exclude_modules'] = ['devel', 'stage_file_proxy', 'cl_server'];
+
