@@ -2,11 +2,11 @@ const processTokens = require('../../utils/processTokens')
 
 const color = {
   primary: {
-    background: `$foun-color-neutral-gray`,
+    background: `$foun-color-brand-true-tulanegreen`,
     // trueHeading: ``, Uncomment and use to override suggestions
     // trueText: `$foun-color-core-true-red`,
     container: {
-      background: `$foun-color-brand-medallion-20`,
+      background: `$foun-color-brand-true-tulaneblue`,
       // trueHeading: ``,
       // trueText: ``,
     },

@@ -50,16 +50,25 @@ body {
 
 // Containers
 .container {
-  background-color: $cont-color-primary-container-background;
+  background-color: $cont-color-secondary-container-background;
   border-radius: $cont-border-radius-md;
   padding: $foun-spacing-md;
   box-shadow: $cont-box-shadow-elevated1;
   color: $cont-color-primary-container-contrast-best-a;
 }
 
+.site-header {
+  box-shadow: $cont-box-shadow-elevated4;
+}
+
+.site-name a {
+  font-size: $foun-font-size-xxxl;
+  color: $cont-color-secondary-container-contrast-good-a;
+  font-weight: $foun-font-weight-black;
+}
+
 // Links
 a {
-  color: $foun-color-brand-true-tulaneblue;
   text-decoration: none;
   transition: color $foun-transition-duration-fast
     $foun-transition-timing-function-ease-in-out;
@@ -81,10 +90,6 @@ a {
 
 .flex {
   display: $foun-display-flex;
-}
-
-.inline-flex {
-  display: $foun-display-inline-flex;
 }
 
 .block {
@@ -129,4 +134,8 @@ a {
 
 .mb-xxl {
   margin-bottom: $foun-spacing-xxl;
+}
+
+.element-finder {
+  outline: 3px solid red;
 }
