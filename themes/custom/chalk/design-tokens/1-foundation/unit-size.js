@@ -1,26 +1,33 @@
 const processTokens = require('../../utils/processTokens')
 
 const sizeScale = {
-  fiero: 0.8,
-  escort: 1,
-  caprice: 1.1,
-  delta88: 1.25,
-  fleetwood: 1.4,
+  fiero: 0.5,
+  escort: 0.7,
+  aries: 0.8,
+  regal: 1,
+  continental: 1.2,
+  fleetwood: 1.5,
+  suburban: 2,
 }
 
 const baseValues = {
-  fontSize: 1, // 16px in rem
+  fontSize: 1,
   lineHeight: 1.5,
-  padding: 0.5, // 8px in rem
-  margin: 0.5, // 8px in rem
-  borderWidth: 0.0625, // 1px in rem
-  borderRadius: 0.25, // 4px in rem
-  width: 10, // 160px in rem
-  height: 5, // 80px in rem
-  top: 1, // 16px in rem
-  right: 1, // 16px in rem
-  bottom: 1, // 16px in rem
-  left: 1, // 16px in rem
+  padding: 0.5,
+  margin: 0.5,
+  borderWidth: 0.0625,
+  borderRadius: 0.25,
+  width: 10,
+  height: 5,
+  top: 1,
+  right: 1,
+  bottom: 1,
+  left: 1,
+  boxShadowX: 0.125,
+  boxShadowY: 0.222,
+  boxShadowBlur: 0.33,
+  boxShadowSpread: 0.5,
+  boxShadowOpacity: 0.5,
 }
 
 const roundToTwoDecimalPlaces = (num) => {
@@ -32,8 +39,8 @@ const generateTokensForSize = (size) => {
   const tokens = {}
 
   for (const key in baseValues) {
-    const valueInRem = roundToTwoDecimalPlaces(baseValues[key] * scaleFactor)
-    tokens[key] = `${valueInRem}rem`
+    const scaledValue = roundToTwoDecimalPlaces(baseValues[key] * scaleFactor)
+    tokens[key] = key === 'boxShadowOpacity' ? scaledValue : `${scaledValue}rem`
   }
 
   return tokens
@@ -42,9 +49,11 @@ const generateTokensForSize = (size) => {
 const unit = {
   fiero: generateTokensForSize('fiero'),
   escort: generateTokensForSize('escort'),
-  caprice: generateTokensForSize('caprice'),
-  delta88: generateTokensForSize('delta88'),
+  aries: generateTokensForSize('aries'),
+  regal: generateTokensForSize('regal'),
+  continental: generateTokensForSize('continental'),
   fleetwood: generateTokensForSize('fleetwood'),
+  suburban: generateTokensForSize('suburban'),
 }
 
 module.exports = {
