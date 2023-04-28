@@ -1,10 +1,10 @@
 /* Error: Undefined variable.
  *     ,
- * 265 | $cont-box-shadow-elevated1: $foun-spacing-xxxs $foun-spacing-xxxs $foun-spacing-xxs rgba(46, 46, 69, 0.2);
- *     |                             ^^^^^^^^^^^^^^^^^^
+ * 121 |     box-shadow: $cont-box-shadow-fleetwood;
+ *     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
  *     '
- *   _design-tokens.scss 265:29  @import
- *   sass/main.scss 2:9          root stylesheet */
+ *   sass/global/base/_body.scss 121:17  @import
+ *   sass/main.scss 6:9                  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a     \2577 \a 265 \2502  $cont-box-shadow-elevated1: $foun-spacing-xxxs $foun-spacing-xxxs $foun-spacing-xxs rgba(46, 46, 69, 0.2);\a     \2502                              ^^^^^^^^^^^^^^^^^^\a     \2575 \a   _design-tokens.scss 265:29  @import\a   sass/main.scss 2:9          root stylesheet";
+  content: "Error: Undefined variable.\a     \2577 \a 121 \2502      box-shadow: $cont-box-shadow-fleetwood;\a     \2502                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   sass/global/base/_body.scss 121:17  @import\a   sass/main.scss 6:9                  root stylesheet";
 }
