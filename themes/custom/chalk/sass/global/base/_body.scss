@@ -1,179 +1,179 @@
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Black.ttf')
-    format('truetype');
-  font-weight: 900;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Bold.ttf')
-    format('truetype');
-  font-weight: 700;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Medium.ttf')
-    format('truetype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: Barlow;
-  src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Regular.ttf')
-    format('truetype');
-  font-weight: 400;
-}
-@font-face {
-  font-family: Battambang;
-  src: url('/themes/custom/chalk/fonts/Battambang/Battambang-Bold.ttf')
-    format('truetype');
-  font-weight: 700;
-}
+// @font-face {
+//   font-family: Barlow;
+//   src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Black.ttf')
+//     format('truetype');
+//   font-weight: 900;
+// }
+// @font-face {
+//   font-family: Barlow;
+//   src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Bold.ttf')
+//     format('truetype');
+//   font-weight: 700;
+// }
+// @font-face {
+//   font-family: Barlow;
+//   src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Medium.ttf')
+//     format('truetype');
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: Barlow;
+//   src: url('/themes/custom/chalk/fonts/Barlow/Barlow-Regular.ttf')
+//     format('truetype');
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: Battambang;
+//   src: url('/themes/custom/chalk/fonts/Battambang/Battambang-Bold.ttf')
+//     format('truetype');
+//   font-weight: 700;
+// }
 
-*,
-:root {
-  box-sizing: border-box; // b/c border-box
-}
+// *,
+// :root {
+//   box-sizing: border-box; // b/c border-box
+// }
 
-*:not(img):not(video):not(svg),
-*:after,
-*:before {
-  box-sizing: inherit;
-}
+// *:not(img):not(video):not(svg),
+// *:after,
+// *:before {
+//   box-sizing: inherit;
+// }
 
-html {
-  line-height: $foun-font-line-height-md;
-  font-size: $foun-font-size-md;
-}
+// html {
+//   line-height: $foun-font-line-height-md;
+//   font-size: $foun-font-size-md;
+// }
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: invert($cont-color-tertiary-background);
-  font-family: $foun-font-family-body;
-  font-size: $foun-font-size-md;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0;
+//   // background-color: invert($cont-color-tertiary-background);
+//   font-family: $foun-font-family-body;
+//   font-size: $foun-font-size-md;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $foun-font-family-heading;
-  color: invert($cont-color-tertiary-contrast-best-a);
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: $foun-font-family-heading;
+//   // color: invert($cont-color-tertiary-contrast-best-a);
+// }
 
-h1 {
-  font-size: $foun-font-size-xl;
-}
+// h1 {
+//   font-size: $foun-font-size-xl;
+// }
 
-.shad1 {
-  box-shadow: $cont-box-shadow-elevated1;
-}
+// .shad1 {
+//   box-shadow: $cont-box-shadow-elevated1;
+// }
 
-@keyframes fly-in-md-springy-sm {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
+// @keyframes fly-in-md-springy-sm {
+//   0% {
+//     left: -100%;
+//   }
+//   100% {
+//     left: 0;
+//   }
+// }
 
-@keyframes fly-in-lg-springy-lg {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
+// @keyframes fly-in-lg-springy-lg {
+//   0% {
+//     left: -100%;
+//   }
+//   100% {
+//     left: 0;
+//   }
+// }
 
-.fly-in-md-springy-sm {
-  position: relative;
-  animation-name: fly-in-md-springy-sm;
-  animation-delay: 0;
-  animation-duration: $foun-transition-duration-fast;
-  animation-timing-function: $foun-transition-timing-function-springy-sm;
-  animation-fill-mode: forwards;
-}
+// .fly-in-md-springy-sm {
+//   position: relative;
+//   animation-name: fly-in-md-springy-sm;
+//   animation-delay: 0;
+//   animation-duration: $foun-transition-duration-fast;
+//   animation-timing-function: $foun-transition-timing-function-springy-sm;
+//   animation-fill-mode: forwards;
+// }
 
-.fly-in-lg-springy-lg {
-  position: relative;
-  animation-name: fly-in-lg-springy-lg;
-  animation-delay: 0;
-  animation-duration: $foun-transition-duration-slow;
-  animation-timing-function: $foun-transition-timing-function-springy-lg;
-  animation-fill-mode: forwards;
-}
-.card {
-  box-shadow: $cont-box-shadow-elevated1;
-  padding: 30px;
-  background-color: invert($cont-color-secondary-container-background);
-  width: 800px;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    color: invert($cont-color-secondary-container-contrast-best-c);
-  }
-}
+// .fly-in-lg-springy-lg {
+//   position: relative;
+//   animation-name: fly-in-lg-springy-lg;
+//   animation-delay: 0;
+//   animation-duration: $foun-transition-duration-slow;
+//   animation-timing-function: $foun-transition-timing-function-springy-lg;
+//   animation-fill-mode: forwards;
+// }
+// .card {
+//   box-shadow: $cont-box-shadow-elevated1;
+//   padding: 30px;
+//   background-color: invert($cont-color-secondary-container-background);
+//   width: 800px;
+//   height: 800px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   h2 {
+//     color: invert($cont-color-secondary-container-contrast-best-c);
+//   }
+// }
 
-.card2 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated2;
-  width: 800px;
-  height: 800px;
-}
+// .card2 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated2;
+//   width: 800px;
+//   height: 800px;
+// }
 
-.card3 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated3;
-  width: 700px;
-  height: 700px;
-}
+// .card3 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated3;
+//   width: 700px;
+//   height: 700px;
+// }
 
-.card4 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated4;
-  width: 600px;
-  height: 600px;
-}
+// .card4 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated4;
+//   width: 600px;
+//   height: 600px;
+// }
 
-.card6 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated6;
-  width: 500px;
-  height: 500px;
-}
+// .card6 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated6;
+//   width: 500px;
+//   height: 500px;
+// }
 
-.card8 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated8;
-  width: 400px;
-  height: 400px;
-}
+// .card8 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated8;
+//   width: 400px;
+//   height: 400px;
+// }
 
-.card12 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated12;
-  width: 300px;
-  height: 300px;
-}
+// .card12 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated12;
+//   width: 300px;
+//   height: 300px;
+// }
 
-.card16 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated16;
-  width: 200px;
-  height: 200px;
-}
+// .card16 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated16;
+//   width: 200px;
+//   height: 200px;
+// }
 
-.card24 {
-  @extend .card;
-  box-shadow: $cont-box-shadow-elevated24;
-  width: 100px;
-  height: 100px;
-}
+// .card24 {
+//   @extend .card;
+//   box-shadow: $cont-box-shadow-elevated24;
+//   width: 100px;
+//   height: 100px;
+// }
