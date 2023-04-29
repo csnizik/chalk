@@ -6,23 +6,6 @@ const font = {
     heading: `'Battambang', sans-serif`,
     titling: `'Karantina', sans-serif`,
   },
-  lineHeight: {
-    xs: 1,
-    sm: 1.3,
-    md: 1.7,
-    lg: 2,
-    xl: 2.5,
-    xxl: 3,
-  },
-  size: {
-    xs: '0.7rem',
-    sm: '0.8rem',
-    md: '1rem',
-    lg: '2rem',
-    xl: '3.5rem',
-    xxl: '5rem',
-    xxxl: '8rem',
-  },
   style: {
     italic: 'italic',
     normal: 'normal',

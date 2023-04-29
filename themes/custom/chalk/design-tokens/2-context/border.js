@@ -1,6 +1,16 @@
 const processTokens = require('../../utils/processTokens')
 
-// Using em here instead of rem for more accurate proportional sizing
+const getBorderObject = (dimension) => {
+  return {
+    chihuahua: `$foun-unit-chihuahua-border-${dimension}`,
+    yorkie: `$foun-unit-yorkie-border-${dimension}`,
+    beagle: `$foun-unit-beagle-border-${dimension}`,
+    pug: `$foun-unit-pug-border-${dimension}`,
+    boxer: `$foun-unit-boxer-border-${dimension}`,
+    newfoundland: `$foun-unit-newfoundland-border-${dimension}`,
+    mastiff: `$foun-unit-mastiff-border-${dimension}`,
+  }
+}
 
 const border = {
   style: {
@@ -8,23 +18,8 @@ const border = {
     none: 'none',
     solid: 'solid',
   },
-  radius: {
-    xs: `$foun-spacing-xs`,
-    sm: `$foun-spacing-sm`,
-    md: `$foun-spacing-md`,
-    lg: `$foun-spacing-lg`,
-    xl: `$foun-spacing-xl`,
-    xxl: `$foun-spacing-xxl`,
-    xxxl: `$foun-spacing-xxxl`,
-  },
-  width: {
-    xxs: `$foun-spacing-xxs`,
-    xs: `$foun-spacing-xs`,
-    sm: `$foun-spacing-sm`,
-    md: `$foun-spacing-md`,
-    lg: `$foun-spacing-lg`,
-    xl: `$foun-spacing-xl`,
-  },
+  radius: getBorderObject('radius'),
+  width: getBorderObject('width'),
 }
 
 module.exports = { contBorder: processTokens.generateTokens(border) }

@@ -1,167 +1,63 @@
 @charset "UTF-8";
-@font-face {
-  font-family: Barlow;
-  src: url("/themes/custom/chalk/fonts/Barlow/Barlow-Black.ttf") format("truetype");
-  font-weight: 900;
-}
-@font-face {
-  font-family: Barlow;
-  src: url("/themes/custom/chalk/fonts/Barlow/Barlow-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: Barlow;
-  src: url("/themes/custom/chalk/fonts/Barlow/Barlow-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: Barlow;
-  src: url("/themes/custom/chalk/fonts/Barlow/Barlow-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: Battambang;
-  src: url("/themes/custom/chalk/fonts/Battambang/Battambang-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-*,
-:root {
-  box-sizing: border-box;
-}
-
-*:not(img):not(video):not(svg),
-*:after,
-*:before {
-  box-sizing: inherit;
-}
-
-html {
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-color: #370e11;
-  font-family: "Barlow", serif;
-  font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Battambang", sans-serif;
-  color: #d1d1ba;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-.shad1 {
-  box-shadow: 0.025em 0.025em 0.1em rgba(46, 46, 69, 0.2);
-}
-
-@keyframes fly-in-md-springy-sm {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
-@keyframes fly-in-lg-springy-lg {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
-.fly-in-md-springy-sm {
-  position: relative;
-  animation-name: fly-in-md-springy-sm;
-  animation-delay: 0;
-  animation-duration: 0.333s;
-  animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1.1);
-  animation-fill-mode: forwards;
-}
-
-.fly-in-lg-springy-lg {
-  position: relative;
-  animation-name: fly-in-lg-springy-lg;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.33, -0.33, 0.33, 1.33);
-  animation-fill-mode: forwards;
-}
-
-.card, .card24, .card16, .card12, .card8, .card6, .card4, .card3, .card2 {
-  box-shadow: 0.025em 0.025em 0.1em rgba(46, 46, 69, 0.2);
+.card {
   padding: 30px;
-  background-color: #181122;
-  width: 800px;
-  height: 800px;
+  background-color: #E7EEDD;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.card h2, .card24 h2, .card16 h2, .card12 h2, .card8 h2, .card6 h2, .card4 h2, .card3 h2, .card2 h2 {
-  color: #00c897;
+.card h2 {
+  color: #FF3768;
 }
-
-.card2 {
-  box-shadow: 0.1em 0.1em 0.1em rgba(46, 46, 69, 0.3);
-  width: 800px;
-  height: 800px;
+.card.card-mastiff {
+  box-shadow: 0.33rem 1.18rem 2.68rem rgba(46, 46, 69, 0.8);
+  width: 42.8rem;
+  height: 26.76rem;
+  border: solid 0.8rem black;
+  border-radius: 2.14rem;
 }
-
-.card3 {
-  box-shadow: 0.1em 0.1em 0.25em rgba(46, 46, 69, 0.4);
-  width: 700px;
-  height: 700px;
+.card.card-newfoundland {
+  box-shadow: 0.29rem 1.02rem 2.31rem rgba(46, 46, 69, 0.69);
+  width: 37rem;
+  height: 23.12rem;
+  border: solid 0.69rem black;
+  border-radius: 1.85rem;
 }
-
-.card4 {
-  box-shadow: 0.25em 0.25em 0.25em rgba(46, 46, 69, 0.5);
-  width: 600px;
-  height: 600px;
+.card.card-boxer {
+  box-shadow: 0.24rem 0.86rem 1.95rem rgba(46, 46, 69, 0.59);
+  width: 31.2rem;
+  height: 19.5rem;
+  border: solid 0.59rem black;
+  border-radius: 1.56rem;
 }
-
-.card6 {
-  box-shadow: 0.25em 0.5em 0.5em rgba(46, 46, 69, 0.6);
-  width: 500px;
-  height: 500px;
+.card.card-pug {
+  box-shadow: 0.2rem 0.7rem 1.59rem rgba(46, 46, 69, 0.48);
+  width: 25.4rem;
+  height: 15.88rem;
+  border: solid 0.48rem black;
+  border-radius: 1.27rem;
 }
-
-.card8 {
-  box-shadow: 0.5em 0.75em 0.75em rgba(46, 46, 69, 0.7);
-  width: 400px;
-  height: 400px;
+.card.card-beagle {
+  box-shadow: 0.15rem 0.54rem 0.86rem rgba(46, 46, 69, 0.37);
+  width: 19.6rem;
+  height: 12.26rem;
+  border: solid 0.37rem black;
+  border-radius: 0.98rem;
 }
-
-.card12 {
-  box-shadow: 0.75em 1em 1em rgba(46, 46, 69, 0.8);
-  width: 300px;
-  height: 300px;
+.card.card-yorkie {
+  box-shadow: 0.11rem 0.38rem 0.86rem rgba(46, 46, 69, 0.26);
+  width: 13.8rem;
+  height: 8.62rem;
+  border: solid 0.26rem black;
+  border-radius: 0.69rem;
 }
-
-.card16 {
-  box-shadow: 1em 1.5em 1.5em rgba(46, 46, 69, 0.9);
-  width: 200px;
-  height: 200px;
-}
-
-.card24 {
-  box-shadow: 1.5em 3em 3em rgb(46, 46, 69);
-  width: 100px;
-  height: 100px;
+.card.card-chihuahua {
+  box-shadow: 0.06rem 0.22rem 0.5rem rgba(46, 46, 69, 0.15);
+  width: 8rem;
+  height: 5rem;
+  border: solid 0.15rem black;
+  border-radius: 0.4rem;
 }
 
 .u-is-vishidden {
