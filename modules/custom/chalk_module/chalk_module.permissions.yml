@@ -1,0 +1,4 @@
+administer chalk_module configuration:
+  title: 'Administer chalk_module configuration'
+  description: 'Optional description.'
+  restrict access: true
