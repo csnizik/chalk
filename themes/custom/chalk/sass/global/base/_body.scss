@@ -117,29 +117,53 @@
   h2 {
     color: $cont-color-secondary-container-contrast-best-c;
   }
-  &.card-fleetwood {
-    box-shadow: $cont-box-shadow-fleetwood;
-    width: 800px;
-    height: 350px;
+  &.card-mastiff {
+    box-shadow: $cont-box-shadow-mastiff;
+    width: $cont-size-width-mastiff * 2;
+    height: $cont-size-height-mastiff * 2;
+    border: solid $cont-border-width-mastiff black;
+    border-radius: $cont-border-radius-mastiff;
   }
-  &.card-cutlass {
-    box-shadow: $cont-box-shadow-cutlass;
-    width: 700px;
-    height: 300px;
+  &.card-newfoundland {
+    box-shadow: $cont-box-shadow-newfoundland;
+    width: $cont-size-width-newfoundland * 2;
+    height: $cont-size-height-newfoundland * 2;
+    border: solid $cont-border-width-newfoundland black;
+    border-radius: $cont-border-radius-newfoundland;
   }
-  &.card-aries {
-    box-shadow: $cont-box-shadow-aries;
-    width: 600px;
-    height: 250px;
+  &.card-boxer {
+    box-shadow: $cont-box-shadow-boxer;
+    width: $cont-size-width-boxer * 2;
+    height: $cont-size-height-boxer * 2;
+    border: solid $cont-border-width-boxer black;
+    border-radius: $cont-border-radius-boxer;
   }
-  &.card-escort {
-    box-shadow: $cont-box-shadow-escort;
-    width: 500px;
-    height: 200px;
+  &.card-pug {
+    box-shadow: $cont-box-shadow-pug;
+    width: $cont-size-width-pug * 2;
+    height: $cont-size-height-pug * 2;
+    border: solid $cont-border-width-pug black;
+    border-radius: $cont-border-radius-pug;
   }
-  &.card-chevette {
-    box-shadow: $cont-box-shadow-chevette;
-    width: 400px;
-    height: 150px;
+  &.card-beagle {
+    box-shadow: $cont-box-shadow-beagle;
+    width: $cont-size-width-beagle * 2;
+    height: $cont-size-height-beagle * 2;
+    border: solid $cont-border-width-beagle black;
+    border-radius: $cont-border-radius-beagle;
+  }
+  &.card-yorkie {
+    box-shadow: $cont-box-shadow-yorkie;
+    width: $cont-size-width-yorkie * 2;
+    height: $cont-size-height-yorkie * 2;
+    border: solid $cont-border-width-yorkie black;
+    border-radius: $cont-border-radius-yorkie;
+  }
+  &.card-chihuahua {
+    box-shadow: $cont-box-shadow-chihuahua;
+    width: $cont-size-width-chihuahua * 2;
+    height: $cont-size-height-chihuahua * 2;
+    border: solid $cont-border-width-chihuahua black;
+    border-radius: $cont-border-radius-chihuahua;
   }
 }

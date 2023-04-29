@@ -1,13 +1,13 @@
 const processTokens = require('../../utils/processTokens')
 
 const sizeScale = {
-  fiero: 0.5,
-  escort: 0.7,
-  aries: 0.8,
-  regal: 1,
-  continental: 1.2,
-  fleetwood: 1.5,
-  suburban: 2,
+  chihuahua: 0.5,
+  yorkie: 0.8625,
+  beagle: 1.225,
+  pug: 1.5875,
+  boxer: 1.95,
+  newfoundland: 2.3125,
+  mastiff: 2.675,
 }
 
 const baseValues = {
@@ -15,19 +15,19 @@ const baseValues = {
   lineHeight: 1.5,
   padding: 0.5,
   margin: 0.5,
-  borderWidth: 0.0625,
-  borderRadius: 0.25,
-  width: 10,
+  borderWidth: 0.3,
+  borderRadius: 0.8,
+  width: 8,
   height: 5,
   top: 1,
   right: 1,
   bottom: 1,
   left: 1,
   boxShadowX: 0.125,
-  boxShadowY: 0.222,
-  boxShadowBlur: 0.33,
-  boxShadowSpread: 0.5,
-  boxShadowOpacity: 0.5,
+  boxShadowY: 0.44,
+  boxShadowBlur: 0.9,
+  boxShadowSpread: 1,
+  boxShadowOpacity: 0.3,
 }
 
 const roundToTwoDecimalPlaces = (num) => {
@@ -47,15 +47,15 @@ const generateTokensForSize = (size) => {
 }
 
 const unit = {
-  fiero: generateTokensForSize('fiero'),
-  escort: generateTokensForSize('escort'),
-  aries: generateTokensForSize('aries'),
-  regal: generateTokensForSize('regal'),
-  continental: generateTokensForSize('continental'),
-  fleetwood: generateTokensForSize('fleetwood'),
-  suburban: generateTokensForSize('suburban'),
+  chihuahua: generateTokensForSize('chihuahua'),
+  yorkie: generateTokensForSize('yorkie'),
+  beagle: generateTokensForSize('beagle'),
+  pug: generateTokensForSize('pug'),
+  boxer: generateTokensForSize('boxer'),
+  newfoundland: generateTokensForSize('newfoundland'),
+  mastiff: generateTokensForSize('mastiff'),
 }
 
 module.exports = {
-  founUnitSize: processTokens.generateTokens(unit),
+  founUnit: processTokens.generateTokens(unit),
 }
