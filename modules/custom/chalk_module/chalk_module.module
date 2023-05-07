@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function chalk_module_entity_type_build(array &$entity_types) {
+  $entity_types['design_token']->setFormClass('default', 'Drupal\chalk_module\Form\DesignTokenForm');
+}
