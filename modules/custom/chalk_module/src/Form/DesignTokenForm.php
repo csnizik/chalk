@@ -11,6 +11,9 @@ class DesignTokenForm extends EntityForm {
     $form = parent::form($form, $form_state);
     $entity = $this->entity;
 
+    // Attach style-dictionary
+    $form['#attached']['library'][] = 'chalk_module/style-dictionary';
+
     // Add level field.
     $form['field_token_level'] = [
       '#type' => 'radios',

@@ -1,0 +1,23 @@
+{
+  "name": "chalk_module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "style-dictionary": "^3.8.0"
+  }
+}

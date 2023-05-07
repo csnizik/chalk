@@ -7,5 +7,11 @@ chalk_module:
       css/chalk-module.css: {}
   dependencies:
     - core/drupalSettings
+style-dictionary:
+  version: 1.x
+  js:
+    node_modules/style-dictionary/lib/index.js: {}
+    js/style_dictionary_integration.js: {}
+
     
 
