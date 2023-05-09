@@ -1,4 +1,4 @@
-name: 'Design Token'
+name: 'Design Tokens'
 type: module
 description: 'Create, edit and delete design tokens for building tokenized styles.'
 package: Custom
