@@ -44,8 +44,22 @@ class DesignTokenListBuilder extends ConfigEntityListBuilder {
    */
   public function render() {
     $build = parent::render();
-    $build['table']['#empty'] = $this->t('No design tokens available. <a href=":link">Add design token</a>.', [ ':link' => Url::fromRoute('entity.design_token.add_form')->toString(),
-  ]);
-  return $build;
+
+    // Add the "Add new design token" button
+    $build['add_design_token'] = [
+      '#type' => 'link',
+      '#title' => $this->t('Add new design token'),
+      '#url' => Url::fromRoute('entity.design_token.add_form'),
+      '#attributes' => ['class' => ['button', 'button--primary']],
+      '#weight' => '-99999',
+    ];
+
+    // Reorder elements to have the button above the table
+    // $build['#sorted'] = FALSE;
+    // uasort($build, ['Drupal\Component\Utility\SortArray', 'sortByWeightElement']);
+
+    $build['table']['#empty'] = $this->t('No design tokens available.');
+
+    return $build;
   }
 }
