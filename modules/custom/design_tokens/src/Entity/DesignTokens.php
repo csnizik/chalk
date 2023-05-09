@@ -21,9 +21,6 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *      "delete" = "Drupal\Core\Entity\EntityDeleteForm",  
  *    },
  *    "access" = "Drupal\design_tokens\Entity\DesignTokensAccessControlHandler",
- *    "route_provider" = {
- *      "html" = "Drupal\design_tokens\Entity\DesignTokensHtmlRouteProvider",
- *    },
  *  },
  *  admin_permission = "administer site configuration",
  *  list_cache_tags = { "rendered" },
