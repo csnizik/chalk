@@ -56,6 +56,8 @@ class DesignTokenForm extends EntityForm {
       '#required' => TRUE,
     ];
 
+    // TODO: Add form['actions']['cancel']
+
     return $form;
   }
 
