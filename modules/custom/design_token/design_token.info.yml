@@ -1,5 +1,5 @@
-name: 'Design Tokens'
+name: Design Token
 type: module
-description: 'Create, edit and delete design tokens for building tokenized styles.'
-package: Custom
+description: Provides a Design Token config entity.
 core_version_requirement: ^10
+package: Custom

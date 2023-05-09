@@ -1,44 +1,38 @@
 <?php
 
-namespace Drupal\design_tokens\Entity;
+namespace Drupal\design_token;
 
+use Drupal\Core\Config\Entity\ConfigEntityListBuilder;
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\EntityListBuilder;
-use Drupal\Core\Link;
 
 /**
- * Defines a class to build a listing of Design Tokens.
- * 
- * @ingroup design_tokens
+ * Provides a listing of Design Token entities.
  */
-class DesignTokensListBuilder extends EntityListBuilder {
+class DesignTokenListBuilder extends ConfigEntityListBuilder {
 
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['label'] = $this->t('Label');
+    $header['label'] = $this->t('Design Token');
+    $header['id'] = $this->t('Machine name');
     $header['level'] = $this->t('Level');
     $header['token'] = $this->t('Token');
     $header['value'] = $this->t('Value');
+    return $header + parent::buildHeader();
   }
 
   /**
-   * @inheritdoc
+   * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    $row['query'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.design_token.edit_form',
-      ['design_token' => $entity->id()]
-    );
-    // Show a preview.
-    $row['label']['data'] = $entity->get('label');
-    $row['level']['data'] = $entity->get('level');
-    $row['token']['data'] = $entity->get('token');
-    $row['value']['data'] = $entity->get('value');
+    /* @var $entity \Drupal\design_token\Entity\DesignToken */
+    $row['label'] = $entity->label();
+    $row['id'] = $entity->id();
+    $row['level'] = $entity->level;
+    $row['token'] = $entity->token;
+    $row['value'] = $entity->value;
     return $row + parent::buildRow($entity);
   }
 
-  // TODO: makeLinksFromRef? see smart_datelistbuilder.
 }

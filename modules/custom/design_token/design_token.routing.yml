@@ -1,13 +1,7 @@
-entity.design_tokens.canonical:
-  path: '/admin/structure/design_tokens/{design_token}'
-  defaults:
-    _entity_view: 'design_tokens'
-    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::title'
-
 entity.design_token.collection:
   path: '/admin/structure/design_tokens'
   defaults:
-    _entity_list: 'design_tokens'
+    _entity_list: 'design_token'
     _title: 'Design Tokens'
   requirements:
     _permission: 'administer site configuration'
@@ -15,8 +9,23 @@ entity.design_token.collection:
 entity.design_token.add_form:
   path: '/admin/structure/design_tokens/add'
   defaults:
-    _entity_form: 'design_tokens.add'
-    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::addTitle'
-    entity_type_id: 'design_tokens'
+    _entity_form: 'design_token.add'
+    _title: 'Add design token'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.design_token.edit_form:
+  path: '/admin/structure/design_tokens/{design_token}/configure'
+  defaults:
+    _entity_form: 'design_token.edit'
+    _title: 'Edit design token'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.design_token.delete_form:
+  path: '/admin/structure/design_tokens/{design_token}/delete'
+  defaults:
+    _entity_form: 'design_token.delete'
+    _title: 'Delete design token'
   requirements:
     _permission: 'administer site configuration'
