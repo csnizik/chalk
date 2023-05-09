@@ -51,6 +51,7 @@ base:
       src/css/main.css: {}
   js:
     src/js/tokens/design-tokens.js: {}
+    utils/scripts/processTokens.js: {}
 dialog:
   version: VERSION
   css:
