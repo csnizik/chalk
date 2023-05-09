@@ -38,21 +38,21 @@ class DesignTokenForm extends EntityForm {
     $form['level'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Level'),
-      '#default_value' => $design_token->level,
+      '#default_value' => $design_token->getLevel(),
       '#required' => TRUE,
     ];
 
     $form['token'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Token'),
-      '#default_value' => $design_token->token,
+      '#default_value' => $design_token->getToken(),
       '#required' => TRUE,
     ];
 
     $form['value'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Value'),
-      '#default_value' => $design_token->value,
+      '#default_value' => $design_token->getValue(),
       '#required' => TRUE,
     ];
 

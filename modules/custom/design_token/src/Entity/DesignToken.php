@@ -12,7 +12,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   label = @Translation("Design Token"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\design_token\DesignTokenListBuilder",
+ *     "list_builder" = "Drupal\design_token\Entity\DesignTokenListBuilder",
  *     "form" = {
  *       "add" = "Drupal\design_token\Form\DesignTokenForm",
  *       "edit" = "Drupal\design_token\Form\DesignTokenForm",
@@ -27,6 +27,13 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",
+ *   },
+ *   config_export = {
+ *      "id",
+ *      "label",
+ *      "level",
+ *      "token",
+ *      "value",
  *   },
  *   links = {
  *     "canonical" = "/admin/structure/design_tokens/{design_token}",
@@ -60,6 +67,10 @@ class DesignToken extends ConfigEntityBase {
    */
   protected $level;
 
+  public function getLevel() {
+    return $this->level;
+  }
+
   /**
    * The Design Token token.
    *
@@ -67,11 +78,19 @@ class DesignToken extends ConfigEntityBase {
    */
   protected $token;
 
+  public function getToken() {
+    return $this->token;
+  }
+
   /**
    * The Design Token value.
    *
    * @var string
    */
   protected $value;
+
+  public function getValue() {
+    return $this->value;
+  }
 
 }
