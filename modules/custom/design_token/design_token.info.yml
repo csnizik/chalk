@@ -1,0 +1,5 @@
+name: 'Design Token'
+type: module
+description: 'Create, edit and delete design tokens for building tokenized styles.'
+package: Custom
+core_version_requirement: ^10
