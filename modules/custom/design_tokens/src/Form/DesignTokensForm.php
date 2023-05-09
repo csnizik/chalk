@@ -3,7 +3,6 @@
 namespace Drupal\design_tokens\Form;
 
 use Drupal\Core\Config\Entity\ConfigEntityStorageInterface;
-use Drupal\Core\Datetime\DateFormatterInterface;
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
@@ -81,12 +80,12 @@ class DesignTokensForm extends EntityForm {
     $form['label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Label'),
-      '#default_value' => $entity->label,
+      // '#default_value' => '$entity->label',
     ];
 
     $form['id'] = [
       '#type' => 'machine_name',
-      '#default_value' => $entity->id(),
+      // '#default_value' => '$entity->id',
       '#disabled' => !$entity->isNew(),
       '#maxlength' => 64,
       '#description' => $this->t('A unique name for this design token. It must only contain lowercase letters, numbers and underscores.'),
@@ -113,14 +112,15 @@ class DesignTokensForm extends EntityForm {
         '#type' => 'textfield',
         '#title' => $this->t('Token'),
         '#description' => $this->t('Unique token name'),
-        '#default_value' => $entity->token,
+        // '#default_value' => '$entity->token',
       ];
       $form['value'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Value'),
         '#description' => $this->t('Token value'),
-        '#default_value' => $entity->value,
+        // '#default_value' => '$entity->value',
       ];
+      print_r($entity);
 
       return $form;
   }
