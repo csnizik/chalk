@@ -18,7 +18,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *      "default" = "Drupal\design_tokens\Form\DesignTokensForm",
  *      "add" = "Drupal\design_tokens\Form\DesignTokensForm",
  *      "edit" = "Drupal\design_tokens\Form\DesignTokensForm",
- *      "delete" = "Drupal\design_tokens\Form\DesignTokensDeleteForm",  
+ *      "delete" = "Drupal\Core\Entity\EntityDeleteForm",  
  *    },
  *    "access" = "Drupal\design_tokens\Entity\DesignTokensAccessControlHandler",
  *    "route_provider" = {
