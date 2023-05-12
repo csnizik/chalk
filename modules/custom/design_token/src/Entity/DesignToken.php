@@ -43,6 +43,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *      "id",
  *      "label",
  *      "level",
+ *      "bundle",
  *      "token",
  *      "value",
  *   },

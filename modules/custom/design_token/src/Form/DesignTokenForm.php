@@ -26,6 +26,18 @@ class DesignTokenForm extends EntityForm {
       '#required' => TRUE,
     ];
 
+    $form['type'] = [
+      '#type' => 'select',
+      '#default_value' => $design_token->getType(),
+      '#title' => $this->t('Design Token type'),
+      '#options' => [
+        '1' => $this->t('Foundation'),
+        '2' => $this->t('Context'),
+        '3' => $this->t('Expression'),
+      ],
+        '#required' => TRUE,
+      ];
+
     $form['id'] = [
       '#type' => 'machine_name',
       '#default_value' => $design_token->id(),
@@ -33,13 +45,6 @@ class DesignTokenForm extends EntityForm {
         'exists' => '\Drupal\design_token\Entity\DesignToken::load',
       ],
       '#disabled' => !$design_token->isNew(),
-    ];
-
-    $form['level'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Level'),
-      '#default_value' => $design_token->getLevel(),
-      '#required' => TRUE,
     ];
 
     $form['token'] = [
@@ -66,6 +71,19 @@ class DesignTokenForm extends EntityForm {
    */
   public function save(array $form, FormStateInterface $form_state) {
     $design_token = $this->entity;
+    $design_token_type = $design_token->getType();
+
+    switch($design_token_type) {
+      case 'foundation':
+        // handle foundation token
+        break;
+      case 'context':
+        // handle context token
+        break;
+      case 'expression':
+        // handle expression token
+        break;
+    }
     $status = $design_token->save();
 
     if ($status) {

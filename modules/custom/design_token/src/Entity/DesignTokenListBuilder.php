@@ -15,9 +15,9 @@ class DesignTokenListBuilder extends ConfigEntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['label'] = $this->t('Design Token');
+    $header['type'] = $this->t('Type');
+    $header['label'] = $this->t('Label');
     $header['id'] = $this->t('Machine name');
-    $header['level'] = $this->t('Level');
     $header['token'] = $this->t('Token');
     $header['value'] = $this->t('Value');
     return $header + parent::buildHeader();
@@ -28,14 +28,26 @@ class DesignTokenListBuilder extends ConfigEntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\design_token\Entity\DesignToken */
+    $row['type'] = [
+      'data' => $entity->getType(),
+      'class' => ['menu-label'],
+    ];
     $row['label'] = [
       'data' => $entity->label(),
       'class' => ['menu-label']
     ];
-    $row['id'] = $entity->id();
-    $row['level'] = $entity->getLevel();
-    $row['token'] = $entity->getToken();
-    $row['value'] = $entity->getValue();
+    $row['id'] = [
+      'data' => $entity->id(),
+      'class' => ['menu-label'],
+    ];
+    $row['token'] = [
+      'data' => $entity->getToken(),
+      'class' => ['menu-label'],
+    ];
+    $row['value'] = [
+      'data' => $entity->getValue(),
+      'class' => ['menu-label'],
+    ];
     return $row + parent::buildRow($entity);
   }
 
@@ -53,10 +65,6 @@ class DesignTokenListBuilder extends ConfigEntityListBuilder {
       '#attributes' => ['class' => ['button', 'button--primary']],
       '#weight' => '-99999',
     ];
-
-    // Reorder elements to have the button above the table
-    // $build['#sorted'] = FALSE;
-    // uasort($build, ['Drupal\Component\Utility\SortArray', 'sortByWeightElement']);
 
     $build['table']['#empty'] = $this->t('No design tokens available.');
 
