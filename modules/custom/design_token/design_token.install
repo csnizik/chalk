@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\design_token\Entity\DesignTokenType;
+
+/**
+ * Implements hook_install().
+ */
+function design_token_install() {
+  $types = ['foundation', 'context', 'expression'];
+
+  foreach ($types as $type) {
+    $design_token_type = DesignTokenType::create([
+      'id' => $type,
+      'label' => ucfirst($type),
+    ]);
+    $design_token_type->save();
+  }
+}

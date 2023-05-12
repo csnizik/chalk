@@ -3,3 +3,6 @@ type: module
 description: Provides a Design Token config entity.
 core_version_requirement: ^10
 package: Custom
+entity_types:
+  - design_token
+  - design_token_type

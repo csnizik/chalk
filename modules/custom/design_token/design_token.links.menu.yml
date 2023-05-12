@@ -1,4 +1,3 @@
-# design_token.links.menu.yml
 entity.design_token.collection:
   title: 'Design Tokens'
   route_name: entity.design_token.collection

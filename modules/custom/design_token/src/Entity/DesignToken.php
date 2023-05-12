@@ -10,6 +10,16 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  * @ConfigEntityType(
  *   id = "design_token",
  *   label = @Translation("Design Token"),
+ *   label_collection = @Translation("Design Tokens"),
+ *   label_singular = @Translation("design token"),
+ *   label_plural = @Translation("design tokens"),
+ *   label_count = @PluralTranslation(
+ *     singular = "@count design token", 
+ *     plural = "@count design tokens",
+ *    ),
+ *   bundle_label = @Translation("Design Token type"),
+ *   translatable = TRUE,
+ *   bundle_entity_type = "design_token_type",
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\design_token\Entity\DesignTokenListBuilder",
@@ -26,6 +36,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   admin_permission = "administer site configuration",
  *   entity_keys = {
  *     "id" = "id",
+ *     "bundle" = "type",
  *     "label" = "label",
  *   },
  *   config_export = {
@@ -91,6 +102,17 @@ class DesignToken extends ConfigEntityBase {
 
   public function getValue() {
     return $this->value;
+  }
+
+  /**
+   * The Design Token bundle.
+   * 
+   * @var string
+   */
+  protected $bundle;
+
+  public function getType() {
+    return $this->bundle;
   }
 
 }
