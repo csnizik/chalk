@@ -116,4 +116,15 @@ class DesignToken extends ConfigEntityBase {
     return $this->bundle;
   }
 
+  /** 
+   * Testing color field.
+   * 
+   * @var string
+   */
+  protected $color;
+  
+  public function getColor() {
+    return $this->color;
+  }
+
 }
