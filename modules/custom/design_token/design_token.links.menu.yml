@@ -1,0 +1,5 @@
+entity.design_token.collection:
+  title: 'Design Tokens'
+  route_name: entity.design_token.collection
+  parent: system.admin_structure
+  weight: 100
