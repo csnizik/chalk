@@ -12,4 +12,4 @@ const zIndex = {
   top: 99999,
 }
 
-module.exports = { founZIndex: processTokens.generateTokens(zIndex) }
+module.exports = { foundationZIndex: processTokens.generateTokens(zIndex) }

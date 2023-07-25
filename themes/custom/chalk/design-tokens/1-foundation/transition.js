@@ -22,5 +22,5 @@ const transition = {
 }
 
 module.exports = {
-  founTransition: processTokens.generateTokens(transition),
+  foundationTransition: processTokens.generateTokens(transition),
 }

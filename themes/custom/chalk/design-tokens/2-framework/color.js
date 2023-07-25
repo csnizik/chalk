@@ -42,4 +42,4 @@ const color = {
 
 processTokens.generateColorSuggestions(color)
 
-module.exports = { contColor: processTokens.generateTokens(color) }
+module.exports = { frameworkColor: processTokens.generateTokens(color) }

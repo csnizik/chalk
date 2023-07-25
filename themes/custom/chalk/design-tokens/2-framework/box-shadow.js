@@ -12,4 +12,4 @@ const boxShadow = {
   mastiff: `$foun-unit-mastiff-box-shadow-x $foun-unit-mastiff-box-shadow-y $foun-unit-mastiff-box-shadow-spread ${boxShadowColor}$foun-unit-mastiff-box-shadow-opacity)`,
 }
 
-module.exports = { contBoxShadow: processTokens.generateTokens(boxShadow) }
+module.exports = { frameworkBoxShadow: processTokens.generateTokens(boxShadow) }

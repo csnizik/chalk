@@ -22,4 +22,4 @@ const border = {
   width: getBorderObject('width'),
 }
 
-module.exports = { contBorder: processTokens.generateTokens(border) }
+module.exports = { frameworkBorder: processTokens.generateTokens(border) }

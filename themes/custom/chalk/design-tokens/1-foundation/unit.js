@@ -57,5 +57,5 @@ const unit = {
 }
 
 module.exports = {
-  founUnit: processTokens.generateTokens(unit),
+  foundationUnit: processTokens.generateTokens(unit),
 }

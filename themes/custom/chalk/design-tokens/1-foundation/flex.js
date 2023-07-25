@@ -36,4 +36,4 @@ const flex = {
   },
 }
 
-module.exports = { founFlex: processTokens.generateTokens(flex) }
+module.exports = { foundationFlex: processTokens.generateTokens(flex) }

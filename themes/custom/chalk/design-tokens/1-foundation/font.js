@@ -22,4 +22,4 @@ const font = {
   },
 }
 
-module.exports = { founFont: processTokens.generateTokens(font) }
+module.exports = { foundationFont: processTokens.generateTokens(font) }

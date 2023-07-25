@@ -23,4 +23,4 @@ const size = {
   minHeight: getSizeObject('height'),
 }
 
-module.exports = { contSize: processTokens.generateTokens(size) }
+module.exports = { frameworkSize: processTokens.generateTokens(size) }

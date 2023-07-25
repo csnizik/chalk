@@ -11,4 +11,4 @@ const display = {
   tableHeader: 'table-header-group',
   tableFooter: 'table-footer-group',
 }
-module.exports = { founDisplay: processTokens.generateTokens(display) }
+module.exports = { foundationDisplay: processTokens.generateTokens(display) }

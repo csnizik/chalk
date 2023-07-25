@@ -43,4 +43,4 @@
 //   },
 // }
 
-// module.exports = { contPseudoClass: processTokens.generateTokens(pseudoClass) }
+// module.exports = { frameworkPseudoClass: processTokens.generateTokens(pseudoClass) }

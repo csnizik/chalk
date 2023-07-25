@@ -9,5 +9,5 @@ const breakpoint = {
 }
 
 module.exports = {
-  founBreakpoint: processTokens.generateTokens(breakpoint),
+  foundationBreakpoint: processTokens.generateTokens(breakpoint),
 }

@@ -5,4 +5,4 @@ const visibility = {
   visible: 'visible',
 }
 
-module.exports = { founVisibility: processTokens.generateTokens(visibility) }
+module.exports = { foundationVisibility: processTokens.generateTokens(visibility) }

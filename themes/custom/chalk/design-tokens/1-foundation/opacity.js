@@ -8,4 +8,4 @@ const opacity = {
   opaque: 1,
 }
 
-module.exports = { founOpacity: processTokens.generateTokens(opacity) }
+module.exports = { foundationOpacity: processTokens.generateTokens(opacity) }
