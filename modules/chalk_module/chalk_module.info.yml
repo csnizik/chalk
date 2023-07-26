@@ -1,0 +1,5 @@
+name: Chalk
+type: module
+description: Configurations for Chalk Theme.
+package: Custom
+core_version_requirement: ^9 || ^10

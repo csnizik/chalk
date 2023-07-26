@@ -1,0 +1,6 @@
+chalk_module.settings_form:
+  title: 'Chalk'
+  description: 'Configure Chalk.'
+  parent: system.admin_config_system
+  route_name: chalk_module.settings_form
+  weight: 10
