@@ -1,0 +1,7 @@
+name: Chalk Token
+description: Creates config entities to store design tokens.
+package: custom
+type: module
+core_version_requirement: ^9 || ^10
+
+

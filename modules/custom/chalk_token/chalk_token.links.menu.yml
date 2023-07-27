@@ -1,0 +1,5 @@
+entity.chalk_token.overview:
+  title: Chalk tokens
+  parent: system.admin_structure
+  description: 'List of chalk tokens to extend site functionality.'
+  route_name: entity.chalk_token.collection

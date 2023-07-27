@@ -1,0 +1,14 @@
+chalk_token.chalk_token.*:
+  type: config_entity
+  label: Chalk token
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string

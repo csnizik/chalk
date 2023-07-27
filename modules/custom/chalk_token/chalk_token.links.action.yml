@@ -1,0 +1,5 @@
+entity.chalk_token.add_form:
+  route_name: 'entity.chalk_token.add_form'
+  title: 'Add chalk token'
+  appears_on:
+    - entity.chalk_token.collection

@@ -1,0 +1,31 @@
+entity.chalk_token.collection:
+  path: '/admin/structure/chalk-token'
+  defaults:
+    _entity_list: 'chalk_token'
+    _title: 'Chalk token configuration'
+  requirements:
+    _permission: 'administer chalk_token'
+
+entity.chalk_token.add_form:
+  path: '/admin/structure/chalk_token/add'
+  defaults:
+    _entity_form: 'chalk_token.add'
+    _title: 'Add a chalk token'
+  requirements:
+    _permission: 'administer chalk_token'
+
+entity.chalk_token.edit_form:
+  path: '/admin/structure/chalk-token/{chalk_token}'
+  defaults:
+    _entity_form: 'chalk_token.edit'
+    _title: 'Edit a chalk token'
+  requirements:
+    _permission: 'administer chalk_token'
+
+entity.chalk_token.delete_form:
+  path: '/admin/structure/chalk-token/{chalk_token}/delete'
+  defaults:
+    _entity_form: 'chalk_token.delete'
+    _title: 'Delete a chalk token'
+  requirements:
+    _permission: 'administer chalk_token'
