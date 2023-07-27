@@ -10,16 +10,42 @@ use Drupal\Core\Controller\ControllerBase;
 class ChalkModuleController extends ControllerBase {
 
   /**
-   * Builds the response.
+   * Foundation.
+   *
+   * @return array
+   *   Return foundation tokens page.
    */
-  public function build() {
-
-    $build['content'] = [
-      '#type' => 'item',
-      '#markup' => $this->t('It works!'),
+  public function foundation() {
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Foundation Tokens Page'),
     ];
+  }
 
-    return $build;
+  /**
+   * Framework.
+   *
+   * @return array
+   *   Return framework tokens page.
+   */
+  public function framework() {
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Framework Tokens Page'),
+    ];
+  }
+
+  /**
+   * Feature.
+   *
+   * @return array
+   *   Return feature tokens page.
+   */
+  public function feature() {
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Feature Tokens Page'),
+    ];
   }
 
 }
