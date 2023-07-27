@@ -1,6 +1,6 @@
 chalk_token.settings_form:
-  title: 'Chalk Token'
-  description: 'Configure Chalk Token.'
+  title: 'Chalk tokens'
+  description: 'Configure chalk tokens.'
   parent: system.admin_config_system
   route_name: chalk_token.settings_form
   weight: 10

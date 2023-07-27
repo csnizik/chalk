@@ -28,11 +28,23 @@ class SettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['example'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Example'),
-      '#default_value' => $this->config('chalk_token.settings')->get('example'),
+    $form['foundation']['display'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Display'),
+      '#description' => $this->t('Select the display property value.'),
+      // '#default_value' => $config->get('foundation.display') ?? 'block',
+      '#options' => [
+        'block' => $this->t('Block'),
+        'hidden' => $this->t('Hidden'),
+        'inline' => $this->t('Inline'),
+        'inline-block' => $this->t('Inline Block'),
+        'inline-flex' => $this->t('Inline Flex'),
+        'inline-grid' => $this->t('Inline Grid'),
+        'flex' => $this->t('Flex'),
+        'grid' => $this->t('Grid'),
+      ],
     ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -51,7 +63,7 @@ class SettingsForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('chalk_token.settings')
-      ->set('example', $form_state->getValue('example'))
+      ->set('foundation.display', $form_state->getValue('display'))
       ->save();
     parent::submitForm($form, $form_state);
   }

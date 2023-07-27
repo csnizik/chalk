@@ -6,3 +6,15 @@ chalk_token.settings:
     example:
       type: string
       label: 'Example'
+
+chalk_token.plugin.foundation:
+  type: config_object
+  label: 'Foundation token configuration'
+  mapping:
+    token_value:
+      type: string
+      label: 'Token Value'
+    token_description:
+      type: string
+      label: 'Token Description'
+
