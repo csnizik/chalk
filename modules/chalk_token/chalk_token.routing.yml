@@ -1,0 +1,7 @@
+chalk_token.settings_form:
+  path: '/admin/config/system/chalk-token'
+  defaults:
+    _title: 'Chalk Token settings'
+    _form: 'Drupal\chalk_token\Form\SettingsForm'
+  requirements:
+    _permission: 'administer chalk_token configuration'

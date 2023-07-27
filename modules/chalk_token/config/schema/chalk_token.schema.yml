@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Chalk Token module.
+chalk_token.settings:
+  type: config_object
+  label: 'Chalk Token settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'
