@@ -1,0 +1,4 @@
+services:
+  plugin.manager.chalk_token:
+    class: Drupal\chalk_token\ChalkTokenPluginManager
+    parent: default_plugin_manager
