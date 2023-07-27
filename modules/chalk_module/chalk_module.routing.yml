@@ -1,11 +1,3 @@
-chalk_module.example:
-  path: '/chalk-module/example'
-  defaults:
-    _title: 'Example'
-    _controller: '\Drupal\chalk_module\Controller\ChalkModuleController::build'
-  requirements:
-    _permission: 'access content'
-
 chalk_module.settings_form:
   path: '/admin/config/system/chalk-module'
   defaults:
@@ -13,3 +5,33 @@ chalk_module.settings_form:
     _form: 'Drupal\chalk_module\Form\SettingsForm'
   requirements:
     _permission: 'administer chalk_module configuration'
+
+chalk_module.foundation:
+  path: '/admin/config/design/chalk_module/foundation'
+  defaults:
+    _form: '\Drupal\chalk_module\Form\SettingsForm'
+    _title: 'Foundation Tokens'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+chalk_module.framework:
+  path: '/admin/config/design/chalk_module/framework'
+  defaults:
+    _form: '\Drupal\chalk_module\Form\SettingsForm'
+    _title: 'Framework Tokens'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+chalk_module.feature:
+  path: '/admin/config/design/chalk_module/feature'
+  defaults:
+    _form: '\Drupal\chalk_module\Form\SettingsForm'
+    _title: 'Feature Tokens'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
