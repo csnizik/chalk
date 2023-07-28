@@ -28,19 +28,18 @@ class FoundationForm extends ConfigFormBase {
    *
    */
   public function addOne(array &$form, FormStateInterface $form_state) {
-  $num_properties = $form_state->get('num_properties');
-  $add_button = $num_properties + 1;
-  $form_state->set('num_properties', $add_button);
+    $num_properties = $form_state->get('num_properties');
+    $add_button = $num_properties + 1;
+    $form_state->set('num_properties', $add_button);
 
-  // Store the indexes of the new fields
-  $new_fields = $form_state->get('new_fields') ?? [];
-  $new_fields[] = $add_button - 1;
-  $form_state->set('new_fields', $new_fields);
+    // Store the indexes of the new fields.
+    $new_fields = $form_state->get('new_fields') ?? [];
+    $new_fields[] = $add_button - 1;
+    $form_state->set('new_fields', $new_fields);
 
-  // Rebuild the form with the additional field.
-  $form_state->setRebuild();
-}
-
+    // Rebuild the form with the additional field.
+    $form_state->setRebuild();
+  }
 
   /**
    *
@@ -55,18 +54,17 @@ class FoundationForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('chalk_token.foundationconfig');
 
-if ($form_state->has('num_properties')) {
-  $num_properties = $form_state->get('num_properties');
-}
-else {
-  $values = $config->get('values') ?? [];
-  $num_properties = count($values);
-  if ($num_properties === 0) {
-    $num_properties = 1;
-  }
-  $form_state->set('num_properties', $num_properties);
-}
-
+    if ($form_state->has('num_properties')) {
+      $num_properties = $form_state->get('num_properties');
+    }
+    else {
+      $values = $config->get('values') ?? [];
+      $num_properties = count($values);
+      if ($num_properties === 0) {
+        $num_properties = 1;
+      }
+      $form_state->set('num_properties', $num_properties);
+    }
 
     $form['properties'] = [
       '#type' => 'fieldset',
@@ -119,6 +117,7 @@ else {
       }
     }
 
+    // @todo new field pairs are prefilled w/ values from previous
     $form['properties']['actions']['add_property'] = [
       '#type' => 'submit',
       '#value' => $this->t('Add another property'),
@@ -135,15 +134,22 @@ else {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, formStateInterface $form_state) {
-    $opacity = [];
-    foreach ($form_state->getValue('opacity') as $item) {
-      if (!empty($item['label']) && !empty($item['value'])) {
-        $opacity[$item['label']] = $item['value'];
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $properties = $form_state->getValue('properties');
+    $saved_properties = [];
+
+    if (is_array($properties)) {
+      foreach ($properties as $index => $property) {
+        if (is_array($property) && !empty($property['label']) && !empty($property['value'])) {
+          $saved_properties[] = [
+            'label' => $property['label'],
+            'value' => $property['value'],
+          ];
+        }
       }
     }
 
-    $this->config('chalk_token.foundation')->set('opacity', $opacity)->save();
+    $this->config('chalk_token.foundation')->set('values', $saved_properties)->save();
   }
 
 }
